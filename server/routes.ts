@@ -5,6 +5,15 @@ import { setupAuth } from "./auth";
 import { api } from "@shared/routes";
 import { z } from "zod";
 
+// Schema to handle date coercion from JSON string to Date
+const transactionBodySchema = api.transactions.create.input.extend({
+  date: z.coerce.date(),
+});
+
+const transactionUpdateSchema = api.transactions.update.input.extend({
+  date: z.coerce.date().optional(),
+});
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express,
@@ -20,51 +29,82 @@ export async function registerRoutes(
   };
 
   app.get(api.transactions.list.path, isAuthenticated, async (req, res) => {
-    const userId = (req.user as any).id;
-    const transactions = await storage.getTransactions(userId);
-    res.json(transactions);
+    try {
+      const userId = (req.user as any).id;
+      const transactions = await storage.getTransactions(userId);
+      res.json(transactions);
+    } catch (error) {
+      console.error("Error fetching transactions:", error);
+      res.status(500).json({ message: "Failed to fetch transactions" });
+    }
   });
 
   app.get(api.transactions.get.path, isAuthenticated, async (req, res) => {
-    const transaction = await storage.getTransaction(parseInt(req.params.id));
-    if (!transaction || transaction.userId !== (req.user as any).id) {
-      return res.status(404).send("Transaction not found");
+    try {
+      const transaction = await storage.getTransaction(parseInt(req.params.id));
+      if (!transaction || transaction.userId !== (req.user as any).id) {
+        return res.status(404).json({ message: "Transaction not found" });
+      }
+      res.json(transaction);
+    } catch (error) {
+      console.error("Error fetching transaction:", error);
+      res.status(500).json({ message: "Failed to fetch transaction" });
     }
-    res.json(transaction);
   });
 
   app.post(api.transactions.create.path, isAuthenticated, async (req, res) => {
-    const userId = (req.user as any).id;
-    const body = api.transactions.create.input.parse(req.body);
-    const transaction = await storage.createTransaction(userId, body);
-    res.status(201).json(transaction);
+    try {
+      const userId = (req.user as any).id;
+      const body = transactionBodySchema.parse(req.body);
+      const transaction = await storage.createTransaction(userId, body);
+      res.status(201).json(transaction);
+    } catch (error) {
+      console.error("Error creating transaction:", error);
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ message: error.errors[0].message, field: error.errors[0].path.join('.') });
+      }
+      res.status(500).json({ message: "Failed to create transaction" });
+    }
   });
 
   app.put(api.transactions.update.path, isAuthenticated, async (req, res) => {
-    const id = parseInt(req.params.id);
-    const userId = (req.user as any).id;
-    const transaction = await storage.getTransaction(id);
+    try {
+      const id = parseInt(req.params.id);
+      const userId = (req.user as any).id;
+      const transaction = await storage.getTransaction(id);
 
-    if (!transaction || transaction.userId !== userId) {
-      return res.status(404).send("Transaction not found");
+      if (!transaction || transaction.userId !== userId) {
+        return res.status(404).json({ message: "Transaction not found" });
+      }
+
+      const body = transactionUpdateSchema.parse(req.body);
+      const updated = await storage.updateTransaction(id, body);
+      res.json(updated);
+    } catch (error) {
+      console.error("Error updating transaction:", error);
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ message: error.errors[0].message, field: error.errors[0].path.join('.') });
+      }
+      res.status(500).json({ message: "Failed to update transaction" });
     }
-
-    const body = api.transactions.update.input.parse(req.body);
-    const updated = await storage.updateTransaction(id, body);
-    res.json(updated);
   });
 
   app.delete(api.transactions.delete.path, isAuthenticated, async (req, res) => {
-    const id = parseInt(req.params.id);
-    const userId = (req.user as any).id;
-    const transaction = await storage.getTransaction(id);
+    try {
+      const id = parseInt(req.params.id);
+      const userId = (req.user as any).id;
+      const transaction = await storage.getTransaction(id);
 
-    if (!transaction || transaction.userId !== userId) {
-      return res.status(404).send("Transaction not found");
+      if (!transaction || transaction.userId !== userId) {
+        return res.status(404).json({ message: "Transaction not found" });
+      }
+
+      await storage.deleteTransaction(id);
+      res.status(204).send();
+    } catch (error) {
+      console.error("Error deleting transaction:", error);
+      res.status(500).json({ message: "Failed to delete transaction" });
     }
-
-    await storage.deleteTransaction(id);
-    res.status(204).send();
   });
 
   // Seeding Logic
