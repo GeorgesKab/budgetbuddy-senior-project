@@ -67,7 +67,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium truncate text-foreground">{user.username}</p>
-              <p className="text-xs text-muted-foreground truncate">Free Plan</p>
             </div>
           </div>
           <button
