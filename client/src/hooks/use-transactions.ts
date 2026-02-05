@@ -1,16 +1,19 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { api, buildUrl, type TransactionInput } from "@shared/routes";
+import { useAuth } from "./use-auth";
 import { z } from "zod";
 
 export function useTransactions() {
+  const { user } = useAuth();
   return useQuery({
-    queryKey: [api.transactions.list.path],
+    queryKey: [api.transactions.list.path, user?.id],
     queryFn: async () => {
       const res = await fetch(api.transactions.list.path);
       if (res.status === 401) return null;
       if (!res.ok) throw new Error("Failed to fetch transactions");
       return api.transactions.list.responses[200].parse(await res.json());
     },
+    enabled: !!user,
   });
 }
 

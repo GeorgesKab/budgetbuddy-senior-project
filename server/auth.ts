@@ -27,7 +27,11 @@ export function setupAuth(app: Express) {
     secret: process.env.SESSION_SECRET || "r3pl1t",
     resave: false,
     saveUninitialized: false,
-    store: undefined,
+    store: storage.sessionStore,
+    cookie: {
+      secure: app.get("env") === "production",
+      sameSite: "lax",
+    }
   };
 
   if (app.get("env") === "production") {
