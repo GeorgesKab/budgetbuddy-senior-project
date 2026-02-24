@@ -25,16 +25,38 @@ export default function TransactionsPage() {
   const deleteMutation = useDeleteTransaction();
   const [search, setSearch] = useState("");
   const [filterType, setFilterType] = useState<"all" | "income" | "expense">("all");
+  const [category, setCategory] = useState("all");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
+  const resetFilters = () => {
+    setSearch("");
+    setFilterType("all");
+    setCategory("all");
+    setStartDate("");
+    setEndDate("");
+  };
 
   const filteredTransactions = useMemo(() => {
     if (!transactions) return [];
     return transactions.filter((t) => {
       const matchesSearch = t.description.toLowerCase().includes(search.toLowerCase()) || 
-                           t.category.toLowerCase().includes(search.toLowerCase());
+                           t.category.toLowerCase().includes(search.toLowerCase()) ||
+                           (t.merchant && t.merchant.toLowerCase().includes(search.toLowerCase()));
       const matchesType = filterType === "all" || t.type === filterType;
-      return matchesSearch && matchesType;
+      const matchesCategory = category === "all" || t.category === category;
+      const date = new Date(t.date);
+      const matchesStartDate = !startDate || date >= new Date(startDate);
+      const matchesEndDate = !endDate || date <= new Date(endDate);
+      
+      return matchesSearch && matchesType && matchesCategory && matchesStartDate && matchesEndDate;
     });
-  }, [transactions, search, filterType]);
+  }, [transactions, search, filterType, category, startDate, endDate]);
+
+  const categories = useMemo(() => {
+    if (!transactions) return [];
+    return Array.from(new Set(transactions.map(t => t.category)));
+  }, [transactions]);
 
   if (isLoading) {
     return (
@@ -51,41 +73,85 @@ export default function TransactionsPage() {
           <h1 className="text-3xl font-display font-bold">Transactions</h1>
           <p className="text-muted-foreground">Manage your income and expenses</p>
         </div>
-        <Link href="/transactions/new">
-          <Button className="shadow-lg hover:shadow-xl transition-all">
-            <Plus className="w-4 h-4 mr-2" />
-            Add New
+        <div className="flex items-center gap-3">
+          <Button 
+            variant="outline" 
+            onClick={resetFilters}
+            className="text-muted-foreground hover:text-foreground"
+          >
+            Reset Filters
           </Button>
-        </Link>
+          <Link href="/transactions/new">
+            <Button className="shadow-lg hover:shadow-xl transition-all">
+              <Plus className="w-4 h-4 mr-2" />
+              Add New
+            </Button>
+          </Link>
+        </div>
       </div>
 
       <Card className="shadow-md border-border/50">
         <CardHeader className="pb-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <CardTitle className="text-lg hidden md:block">All Transactions</CardTitle>
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-              <div className="relative w-full sm:w-64">
+          <div className="space-y-4">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+              <CardTitle className="text-lg hidden md:block">All Transactions</CardTitle>
+              <div className="relative w-full md:w-64">
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search description or category..."
+                  placeholder="Search description, category, merchant..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   className="pl-9"
                 />
               </div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               <Select value={filterType} onValueChange={(v: any) => setFilterType(v)}>
-                <SelectTrigger className="w-full sm:w-[150px]">
+                <SelectTrigger>
                   <div className="flex items-center gap-2">
                     <Filter className="w-4 h-4 text-muted-foreground" />
-                    <SelectValue placeholder="Filter" />
+                    <SelectValue placeholder="Type" />
                   </div>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Types</SelectItem>
-                  <SelectItem value="income">Income Only</SelectItem>
-                  <SelectItem value="expense">Expense Only</SelectItem>
+                  <SelectItem value="income">Income</SelectItem>
+                  <SelectItem value="expense">Expense</SelectItem>
                 </SelectContent>
               </Select>
+
+              <Select value={category} onValueChange={setCategory}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Category" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Categories</SelectItem>
+                  {categories.map(cat => (
+                    <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+
+              <div className="flex flex-col gap-1">
+                <Input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  placeholder="Start Date"
+                  className="h-10"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <Input
+                  type="date"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  placeholder="End Date"
+                  className="h-10"
+                />
+              </div>
             </div>
           </div>
         </CardHeader>

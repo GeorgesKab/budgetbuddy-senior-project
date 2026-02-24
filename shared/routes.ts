@@ -74,7 +74,10 @@ export const api = {
     create: {
       method: 'POST' as const,
       path: '/api/transactions',
-      input: insertTransactionSchema,
+      input: insertTransactionSchema.extend({
+        date: z.coerce.date(),
+        merchant: z.string().default(""),
+      }),
       responses: {
         201: z.custom<typeof transactions.$inferSelect>(),
         400: errorSchemas.validation,
@@ -84,7 +87,10 @@ export const api = {
     update: {
       method: 'PUT' as const,
       path: '/api/transactions/:id',
-      input: insertTransactionSchema.partial(),
+      input: insertTransactionSchema.partial().extend({
+        date: z.coerce.date().optional(),
+        merchant: z.string().optional(),
+      }),
       responses: {
         200: z.custom<typeof transactions.$inferSelect>(),
         404: errorSchemas.notFound,

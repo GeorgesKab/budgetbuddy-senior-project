@@ -44,8 +44,27 @@ export class DatabaseStorage implements IStorage {
     return user;
   }
 
-  async getTransactions(userId: number): Promise<Transaction[]> {
-    return db.select().from(transactions).where(eq(transactions.userId, userId));
+  async getTransactions(userId: number, filters?: { search?: string; category?: string; merchant?: string; startDate?: Date; endDate?: Date }): Promise<Transaction[]> {
+    let query = db.select().from(transactions).where(eq(transactions.userId, userId));
+    
+    // Note: Drizzle's where clause doesn't easily chain like this in older versions, 
+    // but we can use and() or build a dynamic where clause.
+    // Given the current setup, we'll fetch and filter in memory if needed, 
+    // or use a more robust query builder if available.
+    // For simplicity and to match existing patterns, let's stick to base fetch for now 
+    // and let the backend handle the heavy lifting if we wanted to scale.
+    // However, the user asked for filters.
+    
+    const all = await db.select().from(transactions).where(eq(transactions.userId, userId));
+    
+    return all.filter(t => {
+      if (filters?.search && !t.description.toLowerCase().includes(filters.search.toLowerCase()) && !t.merchant.toLowerCase().includes(filters.search.toLowerCase())) return false;
+      if (filters?.category && t.category !== filters.category) return false;
+      if (filters?.merchant && !t.merchant.toLowerCase().includes(filters.merchant.toLowerCase())) return false;
+      if (filters?.startDate && new Date(t.date) < filters.startDate) return false;
+      if (filters?.endDate && new Date(t.date) > filters.endDate) return false;
+      return true;
+    });
   }
 
   async getTransaction(id: number): Promise<Transaction | undefined> {

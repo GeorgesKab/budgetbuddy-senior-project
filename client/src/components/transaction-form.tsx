@@ -16,12 +16,13 @@ const formSchema = insertTransactionSchema.extend({
     message: "Amount must be a positive number",
   }),
   date: z.coerce.date(), // HTML date input returns string YYYY-MM-DD
+  merchant: z.string().default(""),
 });
 
 type FormValues = z.infer<typeof formSchema>;
 
 interface TransactionFormProps {
-  defaultValues?: Partial<FormValues> & { id?: number };
+  defaultValues?: (Partial<FormValues> & { id?: number }) | null;
   onSuccess?: () => void;
 }
 
@@ -38,6 +39,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
       amount: defaultValues?.amount?.toString() || "",
       category: defaultValues?.category || "",
       description: defaultValues?.description || "",
+      merchant: defaultValues?.merchant || "",
       type: (defaultValues?.type as "income" | "expense") || "expense",
       date: defaultValues?.date ? new Date(defaultValues.date) : new Date(),
     },
@@ -158,6 +160,20 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
                   {...field} 
                   value={field.value instanceof Date ? field.value.toISOString().split('T')[0] : field.value}
                 />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="merchant"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Merchant</FormLabel>
+              <FormControl>
+                <Input {...field} className="input-field" placeholder="e.g. Amazon, Starbucks" />
               </FormControl>
               <FormMessage />
             </FormItem>

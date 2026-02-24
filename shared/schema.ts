@@ -14,6 +14,7 @@ export const transactions = pgTable("transactions", {
   userId: integer("user_id").notNull(),
   amount: numeric("amount").notNull(), // stored as string decimal
   category: text("category").notNull(),
+  merchant: text("merchant").notNull().default(""),
   date: timestamp("date").notNull(),
   description: text("description").notNull(),
   type: text("type", { enum: ["income", "expense"] }).notNull(),

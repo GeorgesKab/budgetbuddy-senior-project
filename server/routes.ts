@@ -31,7 +31,15 @@ export async function registerRoutes(
   app.get(api.transactions.list.path, isAuthenticated, async (req, res) => {
     try {
       const userId = (req.user as any).id;
-      const transactions = await storage.getTransactions(userId);
+      const { search, category, merchant, startDate, endDate } = req.query;
+      
+      const transactions = await storage.getTransactions(userId, {
+        search: search as string,
+        category: category as string,
+        merchant: merchant as string,
+        startDate: startDate ? new Date(startDate as string) : undefined,
+        endDate: endDate ? new Date(endDate as string) : undefined,
+      });
       res.json(transactions);
     } catch (error) {
       console.error("Error fetching transactions:", error);
@@ -41,7 +49,8 @@ export async function registerRoutes(
 
   app.get(api.transactions.get.path, isAuthenticated, async (req, res) => {
     try {
-      const transaction = await storage.getTransaction(parseInt(req.params.id));
+      const id = parseInt(req.params.id as string);
+      const transaction = await storage.getTransaction(id);
       if (!transaction || transaction.userId !== (req.user as any).id) {
         return res.status(404).json({ message: "Transaction not found" });
       }
@@ -69,7 +78,7 @@ export async function registerRoutes(
 
   app.put(api.transactions.update.path, isAuthenticated, async (req, res) => {
     try {
-      const id = parseInt(req.params.id);
+      const id = parseInt(req.params.id as string);
       const userId = (req.user as any).id;
       const transaction = await storage.getTransaction(id);
 
@@ -91,7 +100,7 @@ export async function registerRoutes(
 
   app.delete(api.transactions.delete.path, isAuthenticated, async (req, res) => {
     try {
-      const id = parseInt(req.params.id);
+      const id = parseInt(req.params.id as string);
       const userId = (req.user as any).id;
       const transaction = await storage.getTransaction(id);
 

@@ -48,7 +48,7 @@ export default function TransactionEditor() {
         </CardHeader>
         <CardContent>
           <TransactionForm 
-            defaultValues={transaction} 
+            defaultValues={transaction as any} 
             onSuccess={() => setLocation("/transactions")} 
           />
         </CardContent>
