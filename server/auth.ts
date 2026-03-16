@@ -31,6 +31,7 @@ export function setupAuth(app: Express) {
     cookie: {
       secure: app.get("env") === "production",
       sameSite: "lax",
+      maxAge: null,
     }
   };
 

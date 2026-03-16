@@ -34,6 +34,7 @@ export function useAuth() {
       return api.auth.login.responses[200].parse(await res.json());
     },
     onSuccess: (data) => {
+      queryClient.clear();
       queryClient.setQueryData([api.auth.user.path], data);
       setLocation("/");
     },
@@ -74,6 +75,7 @@ export function useAuth() {
       if (!res.ok) throw new Error("Logout failed");
     },
     onSuccess: () => {
+      queryClient.clear();
       queryClient.setQueryData([api.auth.user.path], null);
       setLocation("/auth");
     },

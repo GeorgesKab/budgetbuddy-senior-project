@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
-import { LayoutDashboard, Wallet, LogOut, Menu, X } from "lucide-react";
+import { LayoutDashboard, Wallet, LogOut, Menu, X, Settings } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +12,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const navItems = [
     { href: "/", label: "Dashboard", icon: LayoutDashboard },
     { href: "/transactions", label: "Transactions", icon: Wallet },
+    { href: "/categories", label: "Categories", icon: Menu },
+    { href: "/settings", label: "Settings", icon: Settings },
   ];
 
   if (!user) return <>{children}</>;

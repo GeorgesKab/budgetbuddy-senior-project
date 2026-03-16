@@ -1,6 +1,6 @@
-import { users, transactions, type User, type InsertUser, type Transaction, type InsertTransaction } from "@shared/schema";
+import { users, transactions, categories, type User, type InsertUser, type Transaction, type InsertTransaction, type Category, type InsertCategory } from "@shared/schema";
 import { db, pool } from "./db";
-import { eq } from "drizzle-orm";
+import { and, eq, isNull, or } from "drizzle-orm";
 import session from "express-session";
 import connectPg from "connect-pg-simple";
 
@@ -17,6 +17,14 @@ export interface IStorage {
   createTransaction(userId: number, transaction: InsertTransaction): Promise<Transaction>;
   updateTransaction(id: number, transaction: Partial<InsertTransaction>): Promise<Transaction>;
   deleteTransaction(id: number): Promise<void>;
+  
+  getCategories(userId: number): Promise<Category[]>;
+  createCategory(userId: number, category: InsertCategory): Promise<Category>;
+  updateCategory(userId: number, id: number, category: Partial<InsertCategory>): Promise<Category>;
+  deleteCategory(userId: number, id: number): Promise<void>;
+
+  deleteAllTransactions(userId: number): Promise<void>;
+  deleteUser(userId: number): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -91,6 +99,61 @@ export class DatabaseStorage implements IStorage {
 
   async deleteTransaction(id: number): Promise<void> {
     await db.delete(transactions).where(eq(transactions.id, id));
+  }
+
+  async getCategories(userId: number): Promise<Category[]> {
+  return await db
+    .select()
+    .from(categories)
+    .where(or(eq(categories.userId, userId), isNull(categories.userId)));
+}
+
+  async createCategory(userId: number, insertCategory: InsertCategory): Promise<Category> {
+    const [category] = await db
+      .insert(categories)
+      .values({ ...insertCategory, userId })
+      .returning();
+    return category;
+  }
+
+  async updateCategory(userId: number, id: number, updateData: Partial<InsertCategory>): Promise<Category> {
+  const [category] = await db
+    .update(categories)
+    .set(updateData)
+    .where(
+      and(
+        eq(categories.id, id),
+        eq(categories.userId, userId),
+        eq(categories.isDefault, false)
+      )
+    )
+    .returning();
+
+  if (!category) throw new Error("Category not found or cannot be edited");
+  return category;
+}
+
+  async deleteCategory(userId: number, id: number): Promise<void> {
+  const res = await db
+    .delete(categories)
+    .where(
+      and(
+        eq(categories.id, id),
+        eq(categories.userId, userId),
+        eq(categories.isDefault, false)
+      )
+    );
+}
+
+  async deleteAllTransactions(userId: number): Promise<void> {
+    await db.delete(transactions).where(eq(transactions.userId, userId));
+    await db.delete(categories).where(eq(categories.userId, userId));
+  }
+
+  async deleteUser(userId: number): Promise<void> {
+    await db.delete(transactions).where(eq(transactions.userId, userId));
+    await db.delete(categories).where(eq(categories.userId, userId));
+    await db.delete(users).where(eq(users.id, userId));
   }
 }
 

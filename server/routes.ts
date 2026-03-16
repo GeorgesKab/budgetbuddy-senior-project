@@ -116,6 +116,89 @@ export async function registerRoutes(
     }
   });
 
+  // Category Routes
+  app.get(api.categories.list.path, isAuthenticated, async (req, res) => {
+    try {
+      const userId = (req.user as any).id;
+      const categories = await storage.getCategories(userId);
+      res.json(categories);
+    } catch (error) {
+      console.error("Error fetching categories:", error);
+      res.status(500).json({ message: "Failed to fetch categories" });
+    }
+  });
+
+  app.post(api.categories.create.path, isAuthenticated, async (req, res) => {
+    try {
+      const userId = (req.user as any).id;
+      const body = api.categories.create.input.parse(req.body);
+      const category = await storage.createCategory(userId, body);
+      res.status(201).json(category);
+    } catch (error) {
+      console.error("Error creating category:", error);
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ message: error.errors[0].message, field: error.errors[0].path.join('.') });
+      }
+      res.status(500).json({ message: "Failed to create category" });
+    }
+  });
+
+  app.patch(api.categories.update.path, isAuthenticated, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id as string);
+      const userId = (req.user as any).id;
+      const body = api.categories.update.input.parse(req.body);
+      const updated = await storage.updateCategory(id, body);
+      res.json(updated);
+    } catch (error) {
+      console.error("Error updating category:", error);
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ message: error.errors[0].message, field: error.errors[0].path.join('.') });
+      }
+      res.status(500).json({ message: "Failed to update category" });
+    }
+  });
+
+  app.delete(api.categories.delete.path, isAuthenticated, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id as string);
+      await storage.deleteCategory(id);
+      res.status(204).send();
+    } catch (error) {
+      console.error("Error deleting category:", error);
+      res.status(500).json({ message: "Failed to delete category" });
+    }
+  });
+
+  // User Settings Routes
+  app.post("/api/user/reset", isAuthenticated, async (req, res) => {
+    try {
+      const userId = (req.user as any).id;
+      await storage.deleteAllTransactions(userId);
+      res.status(200).json({ message: "Account reset successfully" });
+    } catch (error) {
+      console.error("Error resetting account:", error);
+      res.status(500).json({ message: "Failed to reset account" });
+    }
+  });
+
+  app.delete("/api/user", isAuthenticated, async (req, res) => {
+    try {
+      const userId = (req.user as any).id;
+      await storage.deleteUser(userId);
+      // Clear session
+      req.logout((err) => {
+        if (err) {
+          return res.status(500).json({ message: "Failed to delete account" });
+        }
+        res.status(204).send();
+      });
+    } catch (error) {
+      console.error("Error deleting account:", error);
+      res.status(500).json({ message: "Failed to delete account" });
+    }
+  });
+
   // Seeding Logic
   const existingUsers = await storage.getUserByUsername("demo");
   if (!existingUsers) {

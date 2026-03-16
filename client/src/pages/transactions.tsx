@@ -1,4 +1,7 @@
 import { useTransactions, useDeleteTransaction } from "@/hooks/use-transactions";
+import { api } from "@shared/routes";
+import { useQuery } from "@tanstack/react-query";
+import type { Category } from "@shared/schema";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,7 +24,12 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 export default function TransactionsPage() {
-  const { data: transactions, isLoading } = useTransactions();
+  const { data: transactions, isLoading: isTransactionsLoading } = useTransactions();
+  const { data: customCategories, isLoading: isCategoriesLoading } = useQuery<Category[]>({
+    queryKey: [api.categories.list.path],
+  });
+  const isLoading = isTransactionsLoading || isCategoriesLoading;
+
   const deleteMutation = useDeleteTransaction();
   const [search, setSearch] = useState("");
   const [filterType, setFilterType] = useState<"all" | "income" | "expense">("all");
@@ -54,9 +62,10 @@ export default function TransactionsPage() {
   }, [transactions, search, filterType, category, startDate, endDate]);
 
   const categories = useMemo(() => {
-    if (!transactions) return [];
-    return Array.from(new Set(transactions.map(t => t.category)));
-  }, [transactions]);
+    const transactionCats = transactions ? transactions.map(t => t.category) : [];
+    const customCats = customCategories ? customCategories.map(c => c.name) : [];
+    return Array.from(new Set([...transactionCats, ...customCats]));
+  }, [transactions, customCategories]);
 
   if (isLoading) {
     return (

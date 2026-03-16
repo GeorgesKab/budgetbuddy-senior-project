@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { insertUserSchema, insertTransactionSchema, transactions, users } from './schema';
+import { insertUserSchema, insertTransactionSchema, insertCategorySchema, transactions, users, categories } from './schema';
 
 export const errorSchemas = {
   validation: z.object({
@@ -77,6 +77,7 @@ export const api = {
       input: insertTransactionSchema.extend({
         date: z.coerce.date(),
         merchant: z.string().default(""),
+        category: z.string().min(1, "Category is required"),
       }),
       responses: {
         201: z.custom<typeof transactions.$inferSelect>(),
@@ -90,6 +91,7 @@ export const api = {
       input: insertTransactionSchema.partial().extend({
         date: z.coerce.date().optional(),
         merchant: z.string().optional(),
+        category: z.string().min(1, "Category is required").optional(),
       }),
       responses: {
         200: z.custom<typeof transactions.$inferSelect>(),
@@ -103,6 +105,63 @@ export const api = {
       responses: {
         204: z.void(),
         404: errorSchemas.notFound,
+        401: errorSchemas.unauthorized,
+      },
+    },
+  },
+  categories: {
+    list: {
+      method: 'GET' as const,
+      path: '/api/categories',
+      responses: {
+        200: z.array(z.custom<typeof categories.$inferSelect>()),
+        401: errorSchemas.unauthorized,
+      },
+    },
+    create: {
+      method: 'POST' as const,
+      path: '/api/categories',
+      input: insertCategorySchema,
+      responses: {
+        201: z.custom<typeof categories.$inferSelect>(),
+        400: errorSchemas.validation,
+        401: errorSchemas.unauthorized,
+      },
+    },
+    update: {
+      method: 'PATCH' as const,
+      path: '/api/categories/:id',
+      input: insertCategorySchema.partial(),
+      responses: {
+        200: z.custom<typeof categories.$inferSelect>(),
+        404: errorSchemas.notFound,
+        401: errorSchemas.unauthorized,
+      },
+    },
+    delete: {
+      method: 'DELETE' as const,
+      path: '/api/categories/:id',
+      responses: {
+        204: z.void(),
+        404: errorSchemas.notFound,
+        401: errorSchemas.unauthorized,
+      },
+    },
+  },
+  user: {
+    reset: {
+      method: 'POST' as const,
+      path: '/api/user/reset',
+      responses: {
+        200: z.void(),
+        401: errorSchemas.unauthorized,
+      },
+    },
+    delete: {
+      method: 'DELETE' as const,
+      path: '/api/user',
+      responses: {
+        204: z.void(),
         401: errorSchemas.unauthorized,
       },
     },

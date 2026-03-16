@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertTransactionSchema } from "@shared/schema";
+import { insertTransactionSchema, type Category } from "@shared/schema";
+import { api } from "@shared/routes";
+import { useQuery } from "@tanstack/react-query";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +19,7 @@ const formSchema = insertTransactionSchema.extend({
   }),
   date: z.coerce.date(), // HTML date input returns string YYYY-MM-DD
   merchant: z.string().default(""),
+  category: z.string().min(1, "Please select a category"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -29,8 +32,12 @@ interface TransactionFormProps {
 export function TransactionForm({ defaultValues, onSuccess }: TransactionFormProps) {
   const { toast } = useToast();
   const createMutation = useCreateTransaction();
-  const updateMutation = useUpdateTransaction();
-  
+    const updateMutation = useUpdateTransaction();
+
+  const { data: customCategories } = useQuery<Category[]>({
+    queryKey: [api.categories.list.path],
+  });
+
   const isEditing = !!defaultValues?.id;
   
   const form = useForm<FormValues>({
@@ -123,7 +130,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
           name="category"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Category</FormLabel>
+              <FormLabel>Category <span className="text-red-500">*</span></FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger className="input-field">
@@ -131,15 +138,11 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="Food">Food & Dining</SelectItem>
-                  <SelectItem value="Transport">Transport</SelectItem>
-                  <SelectItem value="Housing">Housing</SelectItem>
-                  <SelectItem value="Utilities">Utilities</SelectItem>
-                  <SelectItem value="Entertainment">Entertainment</SelectItem>
-                  <SelectItem value="Shopping">Shopping</SelectItem>
-                  <SelectItem value="Salary">Salary</SelectItem>
-                  <SelectItem value="Freelance">Freelance</SelectItem>
-                  <SelectItem value="Other">Other</SelectItem>
+                    {customCategories?.map((cat) => (
+                        <SelectItem key={cat.id} value={cat.name}>
+                            {cat.name}
+                        </SelectItem>
+                    ))}
                 </SelectContent>
               </Select>
               <FormMessage />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Switch, Route, Redirect } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -10,6 +11,8 @@ import { Loader2 } from "lucide-react";
 import AuthPage from "@/pages/auth";
 import Dashboard from "@/pages/dashboard";
 import TransactionsPage from "@/pages/transactions";
+import CategoriesPage from "@/pages/categories";
+import SettingsPage from "@/pages/settings";
 import TransactionEditor from "@/pages/transaction-editor";
 import NotFound from "@/pages/not-found";
 
@@ -39,19 +42,27 @@ function Router() {
   return (
     <Switch>
       <Route path="/auth" component={AuthPage} />
-      
+
       <Route path="/">
         <ProtectedRoute component={Dashboard} />
       </Route>
-      
+
       <Route path="/transactions">
         <ProtectedRoute component={TransactionsPage} />
       </Route>
-      
+
+      <Route path="/categories">
+        <ProtectedRoute component={CategoriesPage} />
+      </Route>
+
+      <Route path="/settings">
+        <ProtectedRoute component={SettingsPage} />
+      </Route>
+
       <Route path="/transactions/new">
         <ProtectedRoute component={TransactionEditor} />
       </Route>
-      
+
       <Route path="/transactions/:id/edit">
         <ProtectedRoute component={TransactionEditor} />
       </Route>
@@ -62,6 +73,16 @@ function Router() {
 }
 
 function App() {
+    //Remove in final version
+  useEffect(() => {
+    fetch("/api/logout", {
+      method: "POST",
+      credentials: "include",
+    }).finally(() => {
+      queryClient.clear();
+    });
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
