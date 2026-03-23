@@ -32,7 +32,7 @@ interface TransactionFormProps {
 export function TransactionForm({ defaultValues, onSuccess }: TransactionFormProps) {
   const { toast } = useToast();
   const createMutation = useCreateTransaction();
-    const updateMutation = useUpdateTransaction();
+  const updateMutation = useUpdateTransaction();
 
   const { data: customCategories } = useQuery<Category[]>({
     queryKey: [api.categories.list.path],
@@ -200,7 +200,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
         <Button 
           type="submit" 
           disabled={isPending}
-          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+          className="w-full"
         >
           {isPending && <Loader2 className="mr-2 h-5 w-5 animate-spin" />}
           {isEditing ? "Update Transaction" : "Add Transaction"}

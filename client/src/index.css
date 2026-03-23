@@ -5,63 +5,63 @@
 @tailwind utilities;
 
 :root {
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Outfit', sans-serif;
   --font-display: 'Outfit', sans-serif;
 
-  /* Emerald Green Theme - Wealth & Stability */
-  --background: 150 20% 98%;
-  --foreground: 160 40% 10%;
-  
-  --primary: 155 60% 35%;
+  /* Dark Grey Theme */
+  --background: 220 14% 97%;
+  --foreground: 220 13% 13%;
+
+  --primary: 220 10% 22%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 150 15% 90%;
-  --secondary-foreground: 160 40% 20%;
-  
-  --muted: 150 10% 94%;
-  --muted-foreground: 160 15% 45%;
-  
-  --accent: 180 40% 45%;
+
+  --secondary: 220 8% 91%;
+  --secondary-foreground: 220 13% 20%;
+
+  --muted: 220 8% 93%;
+  --muted-foreground: 220 8% 46%;
+
+  --accent: 220 10% 22%;
   --accent-foreground: 0 0% 100%;
-  
+
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  
-  --border: 150 15% 90%;
-  --input: 150 15% 90%;
-  --ring: 155 60% 35%;
-  
+
+  --border: 220 8% 88%;
+  --input: 220 8% 88%;
+  --ring: 220 10% 22%;
+
   --card: 0 0% 100%;
-  --card-foreground: 160 40% 10%;
+  --card-foreground: 220 13% 13%;
 
   --radius: 0.75rem;
 }
 
 .dark {
-  --background: 160 40% 5%;
-  --foreground: 150 10% 98%;
-  
-  --primary: 155 50% 45%;
+  --background: 220 13% 10%;
+  --foreground: 220 8% 96%;
+
+  --primary: 220 8% 62%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 160 30% 15%;
-  --secondary-foreground: 150 10% 98%;
-  
-  --muted: 160 30% 15%;
-  --muted-foreground: 150 10% 65%;
-  
-  --accent: 180 40% 45%;
+
+  --secondary: 220 10% 18%;
+  --secondary-foreground: 220 8% 96%;
+
+  --muted: 220 10% 18%;
+  --muted-foreground: 220 8% 62%;
+
+  --accent: 220 8% 62%;
   --accent-foreground: 0 0% 100%;
-  
+
   --destructive: 0 62% 30%;
   --destructive-foreground: 0 0% 98%;
-  
-  --border: 160 30% 15%;
-  --input: 160 30% 15%;
-  --ring: 155 50% 45%;
-  
-  --card: 160 40% 7%;
-  --card-foreground: 150 10% 98%;
+
+  --border: 220 10% 18%;
+  --input: 220 10% 18%;
+  --ring: 220 8% 62%;
+
+  --card: 220 13% 13%;
+  --card-foreground: 220 8% 96%;
 }
 
 @layer base {
@@ -95,6 +95,10 @@
   .nav-item.active {
     @apply bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:bg-primary/90 hover:text-primary-foreground;
   }
+}
+
+.recharts-legend-item-text {
+  color: #080808 !important;
 }
 
 /* Custom Scrollbar */

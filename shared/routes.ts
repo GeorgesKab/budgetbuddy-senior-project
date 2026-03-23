@@ -118,6 +118,13 @@ export const api = {
         401: errorSchemas.unauthorized,
       },
     },
+    defaults: {
+      method: 'GET' as const,
+      path: '/api/categories/defaults',
+      responses: {
+        200: z.array(z.custom<typeof categories.$inferSelect>()),
+      },
+    },
     create: {
       method: 'POST' as const,
       path: '/api/categories',

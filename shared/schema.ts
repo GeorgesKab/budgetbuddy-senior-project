@@ -26,6 +26,7 @@ export const categories = pgTable("categories", {
   userId: integer("user_id"),
   name: text("name").notNull(),
   type: text("type", { enum: ["income", "expense"] }).notNull().default("expense"),
+  icon: text("icon").notNull().default("banknote"),
   isDefault: boolean("is_default").notNull().default(false),
 });
 
@@ -57,9 +58,10 @@ export const insertUserSchema = createInsertSchema(users);
 export const insertTransactionSchema = createInsertSchema(transactions).omit({ id: true, userId: true }).extend({
   category: z.string().min(1, "Category is required"),
 });
-export const insertCategorySchema = createInsertSchema(categories).omit({ id: true, userId: true }).extend({
+export const insertCategorySchema = createInsertSchema(categories).omit({ id: true, userId: true, isDefault: true }).extend({
   name: z.string().min(1, "Name is required"),
   type: z.enum(["income", "expense"]),
+  icon: z.string().default("banknote"),
 });
 
 export type User = typeof users.$inferSelect;

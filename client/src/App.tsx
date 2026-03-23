@@ -73,16 +73,6 @@ function Router() {
 }
 
 function App() {
-    //Remove in final version
-  useEffect(() => {
-    fetch("/api/logout", {
-      method: "POST",
-      credentials: "include",
-    }).finally(() => {
-      queryClient.clear();
-    });
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

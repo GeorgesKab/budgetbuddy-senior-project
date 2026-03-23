@@ -76,9 +76,9 @@ export default function SettingsPage() {
         <p className="text-muted-foreground">Manage your account settings and preferences.</p>
       </div>
 
-      <Card className="border-orange-200 dark:border-orange-900">
+      <Card>
         <CardHeader>
-          <CardTitle className="text-orange-600 dark:text-orange-400">Reset Account</CardTitle>
+          <CardTitle>Reset Account</CardTitle>
           <CardDescription>Delete all transactions and categories</CardDescription>
         </CardHeader>
         <CardContent>
@@ -118,9 +118,9 @@ export default function SettingsPage() {
         </CardContent>
       </Card>
 
-      <Card className="border-red-200 dark:border-red-900">
+      <Card>
         <CardHeader>
-          <CardTitle className="text-red-600 dark:text-red-400">Delete Account</CardTitle>
+          <CardTitle>Delete Account</CardTitle>
           <CardDescription>Permanently delete your account and all data</CardDescription>
         </CardHeader>
         <CardContent>

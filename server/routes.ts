@@ -117,6 +117,16 @@ export async function registerRoutes(
   });
 
   // Category Routes
+  app.get(api.categories.defaults.path, async (req, res) => {
+    try {
+      const defaults = await storage.getDefaultCategories();
+      res.json(defaults);
+    } catch (error) {
+      console.error("Error fetching default categories:", error);
+      res.status(500).json({ message: "Failed to fetch default categories" });
+    }
+  });
+
   app.get(api.categories.list.path, isAuthenticated, async (req, res) => {
     try {
       const userId = (req.user as any).id;
@@ -148,7 +158,10 @@ export async function registerRoutes(
       const id = parseInt(req.params.id as string);
       const userId = (req.user as any).id;
       const body = api.categories.update.input.parse(req.body);
-      const updated = await storage.updateCategory(id, body);
+      const updated = await storage.updateCategory(id, userId, body);
+      if (!updated) {
+        return res.status(404).json({ message: "Category not found" });
+      }
       res.json(updated);
     } catch (error) {
       console.error("Error updating category:", error);
@@ -162,11 +175,40 @@ export async function registerRoutes(
   app.delete(api.categories.delete.path, isAuthenticated, async (req, res) => {
     try {
       const id = parseInt(req.params.id as string);
-      await storage.deleteCategory(id);
+      const userId = (req.user as any).id;
+      const deleted = await storage.deleteCategory(id, userId);
+      if (!deleted) {
+        return res.status(404).json({ message: "Category not found" });
+      }
       res.status(204).send();
     } catch (error) {
       console.error("Error deleting category:", error);
       res.status(500).json({ message: "Failed to delete category" });
+    }
+  });
+
+  // CSV Import
+  app.post("/api/transactions/import", isAuthenticated, async (req, res) => {
+    try {
+      const userId = (req.user as any).id;
+      const rowSchema = z.object({
+        date: z.coerce.date(),
+        type: z.enum(["income", "expense"]),
+        amount: z.string().regex(/^\d+(\.\d{1,2})?$/, "Amount must be a positive number"),
+        category: z.string().min(1, "Category is required"),
+        description: z.string().default(""),
+        merchant: z.string().default(""),
+      });
+      const bodySchema = z.array(rowSchema);
+      const rows = bodySchema.parse(req.body);
+      const result = await storage.bulkCreateTransactions(userId, rows);
+      res.status(201).json(result);
+    } catch (error) {
+      console.error("Error importing transactions:", error);
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ message: "Invalid data", errors: error.errors });
+      }
+      res.status(500).json({ message: "Failed to import transactions" });
     }
   });
 

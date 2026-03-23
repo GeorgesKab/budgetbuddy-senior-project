@@ -1,6 +1,6 @@
 import { users, transactions, categories, type User, type InsertUser, type Transaction, type InsertTransaction, type Category, type InsertCategory } from "@shared/schema";
 import { db, pool } from "./db";
-import { and, eq, isNull, or } from "drizzle-orm";
+import { eq, and, isNull } from "drizzle-orm";
 import session from "express-session";
 import connectPg from "connect-pg-simple";
 
@@ -19,10 +19,12 @@ export interface IStorage {
   deleteTransaction(id: number): Promise<void>;
   
   getCategories(userId: number): Promise<Category[]>;
+  getDefaultCategories(): Promise<Category[]>;
   createCategory(userId: number, category: InsertCategory): Promise<Category>;
-  updateCategory(userId: number, id: number, category: Partial<InsertCategory>): Promise<Category>;
-  deleteCategory(userId: number, id: number): Promise<void>;
+  updateCategory(id: number, userId: number, category: Partial<InsertCategory>): Promise<Category | null>;
+  deleteCategory(id: number, userId: number): Promise<boolean>;
 
+  bulkCreateTransactions(userId: number, transactions: InsertTransaction[]): Promise<{ imported: number }>;
   deleteAllTransactions(userId: number): Promise<void>;
   deleteUser(userId: number): Promise<void>;
 }
@@ -102,11 +104,12 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getCategories(userId: number): Promise<Category[]> {
-  return await db
-    .select()
-    .from(categories)
-    .where(or(eq(categories.userId, userId), isNull(categories.userId)));
-}
+    return await db.select().from(categories).where(and(eq(categories.userId, userId), eq(categories.isDefault, false)));
+  }
+
+  async getDefaultCategories(): Promise<Category[]> {
+    return await db.select().from(categories).where(and(eq(categories.isDefault, true), isNull(categories.userId)));
+  }
 
   async createCategory(userId: number, insertCategory: InsertCategory): Promise<Category> {
     const [category] = await db
@@ -116,34 +119,25 @@ export class DatabaseStorage implements IStorage {
     return category;
   }
 
-  async updateCategory(userId: number, id: number, updateData: Partial<InsertCategory>): Promise<Category> {
-  const [category] = await db
-    .update(categories)
-    .set(updateData)
-    .where(
-      and(
-        eq(categories.id, id),
-        eq(categories.userId, userId),
-        eq(categories.isDefault, false)
-      )
-    )
-    .returning();
+  async updateCategory(id: number, userId: number, updateData: Partial<InsertCategory>): Promise<Category | null> {
+    const [category] = await db
+      .update(categories)
+      .set(updateData)
+      .where(and(eq(categories.id, id), eq(categories.userId, userId), eq(categories.isDefault, false)))
+      .returning();
+    return category ?? null;
+  }
 
-  if (!category) throw new Error("Category not found or cannot be edited");
-  return category;
-}
+  async deleteCategory(id: number, userId: number): Promise<boolean> {
+    const result = await db.delete(categories).where(and(eq(categories.id, id), eq(categories.userId, userId), eq(categories.isDefault, false)));
+    return (result.rowCount ?? 0) > 0;
+  }
 
-  async deleteCategory(userId: number, id: number): Promise<void> {
-  const res = await db
-    .delete(categories)
-    .where(
-      and(
-        eq(categories.id, id),
-        eq(categories.userId, userId),
-        eq(categories.isDefault, false)
-      )
-    );
-}
+  async bulkCreateTransactions(userId: number, insertRows: InsertTransaction[]): Promise<{ imported: number }> {
+    if (insertRows.length === 0) return { imported: 0 };
+    await db.insert(transactions).values(insertRows.map(t => ({ ...t, userId })));
+    return { imported: insertRows.length };
+  }
 
   async deleteAllTransactions(userId: number): Promise<void> {
     await db.delete(transactions).where(eq(transactions.userId, userId));
