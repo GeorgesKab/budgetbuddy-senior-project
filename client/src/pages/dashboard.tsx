@@ -1,17 +1,21 @@
 import { useTransactions } from "@/hooks/use-transactions";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowDownCircle, ArrowUpCircle, Wallet, Plus, Settings2, X, GripVertical, Eye, EyeOff } from "lucide-react";
+import { ArrowDownCircle, ArrowUpCircle, Wallet, Plus, Settings2, X, GripVertical, Eye, EyeOff, CalendarIcon } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { format } from "date-fns";
+import { Input } from "@/components/ui/input";
+import { format, subDays } from "date-fns";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
 import { useMemo, useState, useRef } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { BalanceTrendChart } from "@/components/balance-trend-chart";
 import { TopExpensesChart } from "@/components/top-expenses-chart";
 import { useLocalStorage } from "@/hooks/use-local-storage";
-import type { Transaction } from "@shared/schema";
+import type { Transaction, Category } from "@shared/schema";
 import { getCategoryColor } from "@/lib/category-colors";
+import { getIconComponent } from "@/lib/category-icons";
+import { api } from "@shared/routes";
 
 type WidgetId = "balanceTrend" | "recentTransactions" | "expenseBreakdown" | "topExpenses";
 
@@ -29,42 +33,41 @@ const DEFAULT_LAYOUT: WidgetConfig[] = [
 ];
 
 function ExpenseBreakdownWidget({ transactions }: { transactions: Transaction[] }) {
-  const [range, setRange] = useState("30");
   const data = useMemo(() => {
-    const days = parseInt(range);
-    const cutoff = new Date();
-    cutoff.setDate(cutoff.getDate() - days);
-    const expenses = transactions.filter(t => t.type === "expense" && new Date(t.date) >= cutoff);
+    const expenses = transactions.filter(t => t.type === "expense");
     const grouped = expenses.reduce((acc, t) => {
       acc[t.category] = (acc[t.category] || 0) + Number(t.amount);
       return acc;
     }, {} as Record<string, number>);
     return Object.entries(grouped).map(([name, value]) => ({ name, value }));
-  }, [transactions, range]);
+  }, [transactions]);
+
+  const total = useMemo(() => data.reduce((sum, d) => sum + d.value, 0), [data]);
 
   return (
-    <Card className="shadow-md border-border/50 h-full">
-      <CardHeader className="flex flex-row items-center justify-between">
+    <Card className="h-full">
+      <CardHeader>
         <CardTitle>Expense Breakdown</CardTitle>
-        <Select value={range} onValueChange={setRange}>
-          <SelectTrigger className="w-[140px]"><SelectValue /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="7">Last 7 days</SelectItem>
-            <SelectItem value="30">Last 30 days</SelectItem>
-            <SelectItem value="90">Last 90 days</SelectItem>
-            <SelectItem value="365">Last year</SelectItem>
-          </SelectContent>
-        </Select>
       </CardHeader>
-      <CardContent className="h-[300px]">
+      <CardContent className="h-[350px]">
         {data.length > 0 ? (
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
-              <Pie data={data} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value">
+              <Pie data={data} cx="50%" cy="45%" innerRadius="55%" outerRadius="80%" paddingAngle={3} dataKey="value" strokeWidth={0}>
                 {data.map((entry) => <Cell key={entry.name} fill={getCategoryColor(entry.name)} />)}
               </Pie>
-              <RechartsTooltip formatter={(v: number) => `$${v.toFixed(2)}`} />
+              <RechartsTooltip
+                formatter={(v: number) => `$${v.toFixed(2)}`}
+                contentStyle={{
+                  backgroundColor: "hsl(var(--card))",
+                  border: "1px solid hsl(var(--border))",
+                  borderRadius: "8px",
+                  fontSize: "13px",
+                }}
+              />
               <Legend verticalAlign="bottom" height={36} />
+              <text x="50%" y="42%" textAnchor="middle" dominantBaseline="central" style={{ fontSize: "1.5rem", fontWeight: 700, fill: "hsl(var(--foreground))" }}>${total.toFixed(2)}</text>
+              <text x="50%" y="50%" textAnchor="middle" dominantBaseline="central" style={{ fontSize: "0.75rem", fill: "hsl(var(--muted-foreground))" }}>Total Expenses</text>
             </PieChart>
           </ResponsiveContainer>
         ) : (
@@ -75,28 +78,39 @@ function ExpenseBreakdownWidget({ transactions }: { transactions: Transaction[] 
   );
 }
 
-function RecentTransactionsWidget({ transactions }: { transactions: Transaction[] }) {
+function RecentTransactionsWidget({ transactions, categories }: { transactions: Transaction[]; categories: Category[] }) {
+  const iconMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    categories.forEach(c => { map[c.name.toLowerCase()] = c.icon; });
+    return map;
+  }, [categories]);
+
   return (
-    <Card className="shadow-md border-border/50 h-full">
+    <Card className="h-full">
       <CardHeader><CardTitle>Recent Transactions</CardTitle></CardHeader>
       <CardContent>
-        <div className="space-y-4">
-          {transactions.slice(0, 5).map(t => (
-            <div key={t.id} className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-colors border border-transparent hover:border-border/50">
-              <div className="flex flex-col">
-                <span className="font-medium text-foreground">{t.description}</span>
-                <span className="text-xs text-muted-foreground">{format(new Date(t.date), "MMM d, yyyy")} • {t.category}</span>
+        <div className="divide-y divide-border">
+          {transactions.slice(0, 7).map(t => {
+            const iconName = iconMap[t.category.toLowerCase()] || "circle";
+            const IconComp = getIconComponent(iconName);
+            return (
+              <div key={t.id} className="flex items-center gap-3 py-3 hover:bg-muted/30 transition-colors px-1">
+                <IconComp className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                <div className="flex flex-col flex-1 min-w-0">
+                  <span className="font-medium text-foreground truncate">{t.description}</span>
+                  <span className="text-xs text-muted-foreground">{format(new Date(t.date), "MMM d, yyyy")} • {t.category}</span>
+                </div>
+                <span className={`font-semibold whitespace-nowrap ${t.type === "income" ? "text-emerald-600" : "text-destructive"}`}>
+                  {t.type === "income" ? "+" : "-"}${Number(t.amount).toFixed(2)}
+                </span>
               </div>
-              <span className={`font-semibold ${t.type === "income" ? "text-emerald-600" : "text-destructive"}`}>
-                {t.type === "income" ? "+" : "-"}${Number(t.amount).toFixed(2)}
-              </span>
-            </div>
-          ))}
+            );
+          })}
           {transactions.length === 0 && (
             <p className="text-center text-muted-foreground py-8">No transactions yet.</p>
           )}
         </div>
-        {transactions.length > 5 && (
+        {transactions.length > 7 && (
           <div className="mt-4 text-center">
             <Link href="/transactions" className="text-sm text-primary hover:underline font-medium">View all transactions</Link>
           </div>
@@ -110,12 +124,45 @@ const SIDE_BY_SIDE: WidgetId[] = ["recentTransactions", "expenseBreakdown"];
 
 export default function Dashboard() {
   const { data: transactions, isLoading } = useTransactions();
+  const { data: userCategories } = useQuery<Category[]>({ queryKey: [api.categories.list.path] });
+  const { data: defaultCategories } = useQuery<Category[]>({ queryKey: [api.categories.defaults.path] });
+  const allCategories = useMemo(() => [...(defaultCategories || []), ...(userCategories || [])], [defaultCategories, userCategories]);
   const [layout, setLayout] = useLocalStorage<WidgetConfig[]>("dashboard-layout-v2", DEFAULT_LAYOUT);
   const [showCustomize, setShowCustomize] = useState(false);
   const dragId = useRef<WidgetId | null>(null);
   const [dragOverId, setDragOverId] = useState<WidgetId | null>(null);
 
-  const stats = useMemo(() => {
+  const [dateRange, setDateRange] = useState("30");
+  const [customFrom, setCustomFrom] = useState(() => format(subDays(new Date(), 30), "yyyy-MM-dd"));
+  const [customTo, setCustomTo] = useState(() => format(new Date(), "yyyy-MM-dd"));
+
+  const { startDate, endDate } = useMemo(() => {
+    if (dateRange === "all") {
+      return { startDate: new Date(0), endDate: new Date() };
+    }
+    if (dateRange === "custom") {
+      return {
+        startDate: new Date(customFrom + "T00:00:00"),
+        endDate: new Date(customTo + "T23:59:59"),
+      };
+    }
+    const days = parseInt(dateRange);
+    return {
+      startDate: subDays(new Date(), days),
+      endDate: new Date(),
+    };
+  }, [dateRange, customFrom, customTo]);
+
+  const filteredTransactions = useMemo(() => {
+    if (!transactions) return [];
+    if (dateRange === "all") return transactions;
+    return transactions.filter(t => {
+      const d = new Date(t.date);
+      return d >= startDate && d <= endDate;
+    });
+  }, [transactions, startDate, endDate, dateRange]);
+
+  const allTimeStats = useMemo(() => {
     if (!transactions) return { income: 0, expense: 0, total: 0 };
     return transactions.reduce(
       (acc, t) => {
@@ -127,6 +174,18 @@ export default function Dashboard() {
       { income: 0, expense: 0, total: 0 }
     );
   }, [transactions]);
+
+  const rangeStats = useMemo(() => {
+    return filteredTransactions.reduce(
+      (acc, t) => {
+        const amount = Number(t.amount);
+        if (t.type === "income") { acc.income += amount; acc.total += amount; }
+        else { acc.expense += amount; acc.total -= amount; }
+        return acc;
+      },
+      { income: 0, expense: 0, total: 0 }
+    );
+  }, [filteredTransactions]);
 
   if (isLoading) {
     return (
@@ -164,10 +223,10 @@ export default function Dashboard() {
   const renderWidgetContent = (id: WidgetId) => {
     if (!transactions) return null;
     switch (id) {
-      case "balanceTrend":       return <BalanceTrendChart transactions={transactions} />;
-      case "recentTransactions": return <RecentTransactionsWidget transactions={transactions} />;
-      case "expenseBreakdown":   return <ExpenseBreakdownWidget transactions={transactions} />;
-      case "topExpenses":        return <TopExpensesChart transactions={transactions} />;
+      case "balanceTrend":       return <BalanceTrendChart transactions={filteredTransactions} allTransactions={transactions} startDate={startDate} />;
+      case "recentTransactions": return <RecentTransactionsWidget transactions={filteredTransactions} categories={allCategories} />;
+      case "expenseBreakdown":   return <ExpenseBreakdownWidget transactions={filteredTransactions} />;
+      case "topExpenses":        return <TopExpensesChart transactions={filteredTransactions} />;
     }
   };
 
@@ -242,12 +301,54 @@ export default function Dashboard() {
             {showCustomize ? "Done" : "Customize"}
           </Button>
           <Link href="/transactions/new">
-            <Button className="shadow-lg hover:shadow-xl transition-all" data-testid="button-add-transaction">
+            <Button size="sm" data-testid="button-add-transaction">
               <Plus className="w-4 h-4 mr-2" />
               Add Transaction
             </Button>
           </Link>
         </div>
+      </div>
+
+      {/* Date filter */}
+      <div className="flex flex-wrap items-center gap-3" data-testid="dashboard-date-filter">
+        <CalendarIcon className="h-4 w-4 text-muted-foreground" />
+        <Select value={dateRange} onValueChange={(v) => { setDateRange(v); if (v !== "custom" && v !== "all") { setCustomFrom(format(subDays(new Date(), parseInt(v)), "yyyy-MM-dd")); setCustomTo(format(new Date(), "yyyy-MM-dd")); } }}>
+          <SelectTrigger className="w-[150px]" data-testid="select-date-range">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All time</SelectItem>
+            <SelectItem value="7">Last 7 days</SelectItem>
+            <SelectItem value="30">Last 30 days</SelectItem>
+            <SelectItem value="90">Last 90 days</SelectItem>
+            <SelectItem value="365">Last year</SelectItem>
+            <SelectItem value="custom">Custom range</SelectItem>
+          </SelectContent>
+        </Select>
+        {dateRange === "custom" && (
+          <div className="flex items-center gap-2">
+            <Input
+              type="date"
+              value={customFrom}
+              onChange={(e) => setCustomFrom(e.target.value)}
+              className="w-[150px]"
+              data-testid="input-date-from"
+            />
+            <span className="text-muted-foreground text-sm">to</span>
+            <Input
+              type="date"
+              value={customTo}
+              onChange={(e) => setCustomTo(e.target.value)}
+              className="w-[150px]"
+              data-testid="input-date-to"
+            />
+          </div>
+        )}
+        {dateRange !== "custom" && dateRange !== "all" && (
+          <span className="text-sm text-muted-foreground">
+            {format(startDate, "MMM d, yyyy")} – {format(endDate, "MMM d, yyyy")}
+          </span>
+        )}
       </div>
 
       {/* Customize panel */}
@@ -290,7 +391,7 @@ export default function Dashboard() {
         </Card>
       )}
 
-      {/* Stats cards — always fixed at top */}
+      {/* All-time stats cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -298,8 +399,8 @@ export default function Dashboard() {
             <Wallet className="h-4 w-4 text-primary" />
           </CardHeader>
           <CardContent>
-            <div className={`text-2xl font-bold ${stats.total >= 0 ? "text-primary" : "text-destructive"}`}>
-              ${stats.total.toFixed(2)}
+            <div className={`text-2xl font-bold ${allTimeStats.total >= 0 ? "text-primary" : "text-destructive"}`} data-testid="text-total-balance">
+              ${allTimeStats.total.toFixed(2)}
             </div>
             <p className="text-xs text-muted-foreground mt-1">Current net worth</p>
           </CardContent>
@@ -310,7 +411,7 @@ export default function Dashboard() {
             <ArrowUpCircle className="h-4 w-4 text-emerald-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-emerald-600">${stats.income.toFixed(2)}</div>
+            <div className="text-2xl font-bold text-emerald-600" data-testid="text-total-income">${allTimeStats.income.toFixed(2)}</div>
             <p className="text-xs text-muted-foreground mt-1">All time earnings</p>
           </CardContent>
         </Card>
@@ -320,8 +421,30 @@ export default function Dashboard() {
             <ArrowDownCircle className="h-4 w-4 text-destructive" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-destructive">${stats.expense.toFixed(2)}</div>
+            <div className="text-2xl font-bold text-destructive" data-testid="text-total-expenses">${allTimeStats.expense.toFixed(2)}</div>
             <p className="text-xs text-muted-foreground mt-1">All time spending</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Filtered range stats */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Card className="py-3">
+          <CardContent className="flex items-center justify-between py-0">
+            <div className="flex items-center gap-2">
+              <ArrowUpCircle className="h-4 w-4 text-emerald-500" />
+              <span className="text-sm text-muted-foreground">Income in range</span>
+            </div>
+            <span className="text-lg font-semibold text-emerald-600" data-testid="text-range-income">${rangeStats.income.toFixed(2)}</span>
+          </CardContent>
+        </Card>
+        <Card className="py-3">
+          <CardContent className="flex items-center justify-between py-0">
+            <div className="flex items-center gap-2">
+              <ArrowDownCircle className="h-4 w-4 text-destructive" />
+              <span className="text-sm text-muted-foreground">Expenses in range</span>
+            </div>
+            <span className="text-lg font-semibold text-destructive" data-testid="text-range-expenses">${rangeStats.expense.toFixed(2)}</span>
           </CardContent>
         </Card>
       </div>

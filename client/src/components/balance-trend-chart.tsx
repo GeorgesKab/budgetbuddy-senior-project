@@ -1,34 +1,28 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Legend } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import type { Transaction } from "@shared/schema";
-import { format, subDays } from "date-fns";
+import { format } from "date-fns";
 
 interface BalanceTrendChartProps {
   transactions: Transaction[];
+  allTransactions: Transaction[];
+  startDate: Date;
 }
 
-export function BalanceTrendChart({ transactions }: BalanceTrendChartProps) {
-  const [daysRange, setDaysRange] = useState("30");
-
+export function BalanceTrendChart({ transactions, allTransactions, startDate }: BalanceTrendChartProps) {
   const chartData = useMemo(() => {
     if (!transactions || transactions.length === 0) return [];
 
-    const days = parseInt(daysRange);
-    const cutoffDate = new Date();
-    cutoffDate.setDate(cutoffDate.getDate() - days);
-
     const sorted = [...transactions]
-      .filter(t => new Date(t.date) >= cutoffDate)
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-    let runningBalance = 0;
-    const previousTransactions = transactions.filter(t => new Date(t.date) < cutoffDate);
-    runningBalance = previousTransactions.reduce((acc, t) => {
-      const amount = Number(t.amount);
-      return t.type === "income" ? acc + amount : acc - amount;
-    }, 0);
+    let runningBalance = (allTransactions || [])
+      .filter(t => new Date(t.date) < startDate)
+      .reduce((acc, t) => {
+        const amount = Number(t.amount);
+        return t.type === "income" ? acc + amount : acc - amount;
+      }, 0);
 
     const dailyData: Record<string, number> = {};
 
@@ -44,23 +38,12 @@ export function BalanceTrendChart({ transactions }: BalanceTrendChartProps) {
       date,
       balance: parseFloat(balance.toFixed(2)),
     }));
-  }, [transactions, daysRange]);
+  }, [transactions, allTransactions, startDate]);
 
   return (
     <Card className="col-span-1 lg:col-span-2">
-      <CardHeader className="flex flex-row items-center justify-between">
+      <CardHeader>
         <CardTitle>Balance Trend</CardTitle>
-        <Select value={daysRange} onValueChange={setDaysRange}>
-          <SelectTrigger className="w-[140px]">
-            <SelectValue placeholder="Select range" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="7">Last 7 days</SelectItem>
-            <SelectItem value="30">Last 30 days</SelectItem>
-            <SelectItem value="90">Last 90 days</SelectItem>
-            <SelectItem value="365">Last year</SelectItem>
-          </SelectContent>
-        </Select>
       </CardHeader>
       <CardContent className="h-[300px]">
         {chartData.length > 0 ? (
@@ -80,9 +63,10 @@ export function BalanceTrendChart({ transactions }: BalanceTrendChartProps) {
               <RechartsTooltip 
                 formatter={(value: number) => `$${value.toFixed(2)}`}
                 contentStyle={{
-                  backgroundColor: "var(--card)",
-                  border: "1px solid var(--border)",
-                  borderRadius: "6px",
+                  backgroundColor: "hsl(var(--card))",
+                  border: "1px solid hsl(var(--border))",
+                  borderRadius: "8px",
+                  fontSize: "13px",
                 }}
               />
               <Legend />
