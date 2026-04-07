@@ -1,6 +1,6 @@
 import { users, transactions, categories, type User, type InsertUser, type Transaction, type InsertTransaction, type Category, type InsertCategory } from "@shared/schema";
 import { db, pool } from "./db";
-import { eq, and, isNull } from "drizzle-orm";
+import { eq, and, isNull, or } from "drizzle-orm";
 import session from "express-session";
 import connectPg from "connect-pg-simple";
 
@@ -20,6 +20,7 @@ export interface IStorage {
   
   getCategories(userId: number): Promise<Category[]>;
   getDefaultCategories(): Promise<Category[]>;
+  getAllCategories(userId: number): Promise<Category[]>;
   createCategory(userId: number, category: InsertCategory): Promise<Category>;
   updateCategory(id: number, userId: number, category: Partial<InsertCategory>): Promise<Category | null>;
   deleteCategory(id: number, userId: number): Promise<boolean>;
@@ -109,6 +110,10 @@ export class DatabaseStorage implements IStorage {
 
   async getDefaultCategories(): Promise<Category[]> {
     return await db.select().from(categories).where(and(eq(categories.isDefault, true), isNull(categories.userId)));
+  }
+
+  async getAllCategories(userId: number): Promise<Category[]> {
+    return await db.select().from(categories).where(or(eq(categories.userId, userId), eq(categories.isDefault, true)));
   }
 
   async createCategory(userId: number, insertCategory: InsertCategory): Promise<Category> {

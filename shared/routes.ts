@@ -125,6 +125,13 @@ export const api = {
         200: z.array(z.custom<typeof categories.$inferSelect>()),
       },
     },
+    all: {
+      method: 'GET' as const,
+      path: '/api/categories/all',
+      responses: {
+        200: z.array(z.custom<typeof categories.$inferSelect>()),
+      },
+    },
     create: {
       method: 'POST' as const,
       path: '/api/categories',

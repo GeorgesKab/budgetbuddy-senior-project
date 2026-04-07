@@ -35,7 +35,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
   const updateMutation = useUpdateTransaction();
 
   const { data: customCategories } = useQuery<Category[]>({
-    queryKey: [api.categories.list.path],
+    queryKey: [api.categories.all.path],
   });
 
   const isEditing = !!defaultValues?.id;

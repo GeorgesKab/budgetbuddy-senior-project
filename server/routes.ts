@@ -138,6 +138,17 @@ export async function registerRoutes(
     }
   });
 
+  app.get(api.categories.all.path, isAuthenticated, async (req, res) => {
+    try {
+      const userId = (req.user as any).id;
+      const categories = await storage.getAllCategories(userId);
+      res.json(categories);
+    } catch (error) {
+      console.error("Error fetching categories:", error);
+      res.status(500).json({ message: "Failed to fetch categories" });
+    }
+  });
+
   app.post(api.categories.create.path, isAuthenticated, async (req, res) => {
     try {
       const userId = (req.user as any).id;
