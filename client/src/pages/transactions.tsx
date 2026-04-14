@@ -397,66 +397,95 @@ export default function TransactionsPage() {
             </div>
           ) : (
             <div className="divide-y divide-border">
-              {filteredTransactions.map(t => (
-                <div
-                  key={t.id}
-                  className="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-6 py-3.5 hover:bg-muted/40 transition-colors"
-                  data-testid={`row-transaction-${t.id}`}
-                >
-                  <div className="flex items-start gap-3">
-                    <div className={`mt-1.5 w-2.5 h-2.5 rounded-full flex-shrink-0 ${t.type === "income" ? "bg-emerald-500" : "bg-destructive"}`} />
-                    <div>
-                      <p className="font-medium text-foreground leading-tight">{t.description}</p>
-                      <div className="flex flex-wrap gap-1.5 mt-1">
-                        <Badge variant="outline" className="text-xs">{t.category}</Badge>
-                        {t.merchant && <Badge variant="secondary" className="text-xs">{t.merchant}</Badge>}
-                        <span className="text-xs text-muted-foreground">{format(new Date(t.date), "MMM d, yyyy")}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between sm:justify-end gap-6 pl-5 sm:pl-0">
-                    <span className={`text-lg font-bold font-mono ${t.type === "income" ? "text-emerald-600" : "text-destructive"}`}>
-                      {t.type === "income" ? "+" : "-"}${Number(t.amount).toFixed(2)}
-                    </span>
-                    <div className="flex items-center gap-1 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Link href={`/transactions/${t.id}/edit`}>
-                        <Button variant="ghost" size="icon" className="h-8 w-8 hover:text-primary" data-testid={`button-edit-${t.id}`}>
-                          <Edit2 className="w-4 h-4" />
-                        </Button>
-                      </Link>
-                      <AlertDialog>
-                        <AlertDialogTrigger asChild>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-8 w-8 hover:text-destructive text-muted-foreground"
-                            data-testid={`button-delete-${t.id}`}
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </Button>
-                        </AlertDialogTrigger>
-                        <AlertDialogContent>
-                          <AlertDialogHeader>
-                            <AlertDialogTitle>Delete Transaction?</AlertDialogTitle>
-                            <AlertDialogDescription>
-                              This will permanently delete this transaction. This action cannot be undone.
-                            </AlertDialogDescription>
-                          </AlertDialogHeader>
-                          <AlertDialogFooter>
-                            <AlertDialogCancel>Cancel</AlertDialogCancel>
-                            <AlertDialogAction
-                              onClick={() => deleteMutation.mutate(t.id)}
-                              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-                            >
-                              Delete
-                            </AlertDialogAction>
-                          </AlertDialogFooter>
-                        </AlertDialogContent>
-                      </AlertDialog>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              {filteredTransactions.map((t) => (
+  <div
+    key={t.id}
+    className="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-6 py-3.5 hover:bg-muted/40 transition-colors"
+    data-testid={`row-transaction-${t.id}`}
+  >
+    <div className="flex items-start gap-3">
+      <div
+        className={`mt-1.5 w-2.5 h-2.5 rounded-full flex-shrink-0 ${
+          t.type === "income" ? "bg-emerald-500" : "bg-destructive"
+        }`}
+      />
+      <div>
+        <p className="font-medium text-foreground leading-tight">
+          {t.description}
+        </p>
+        <div className="flex flex-wrap gap-1.5 mt-1">
+          <Badge variant="outline" className="text-xs">
+            {t.category}
+          </Badge>
+          {t.merchant && (
+            <Badge variant="secondary" className="text-xs">
+              {t.merchant}
+            </Badge>
+          )}
+          <span className="text-xs text-muted-foreground">
+            {format(new Date(t.date), "MMM d, yyyy")}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div className="flex items-center justify-between sm:justify-end gap-6 pl-5 sm:pl-0">
+      <span
+        className={`text-lg font-bold font-mono ${
+          t.type === "income" ? "text-emerald-600" : "text-destructive"
+        }`}
+      >
+        {t.type === "income" ? "+" : "-"}${Number(t.amount).toFixed(2)}
+      </span>
+
+      <div className="flex items-center gap-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+        <Link href={`/transactions/${t.id}/edit`}>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-8 w-8 text-foreground hover:text-primary"
+            data-testid={`button-edit-${t.id}`}
+          >
+            <Edit2 className="w-4 h-4" />
+          </Button>
+        </Link>
+
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8 text-muted-foreground hover:text-destructive"
+              data-testid={`button-delete-${t.id}`}
+            >
+              <Trash2 className="w-4 h-4" />
+            </Button>
+          </AlertDialogTrigger>
+
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Delete Transaction?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This will permanently delete this transaction. This action
+                cannot be undone.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction
+                onClick={() => deleteMutation.mutate(t.id)}
+                className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+              >
+                Delete
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
+    </div>
+  </div>
+))}
             </div>
           )}
         </CardContent>

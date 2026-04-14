@@ -174,7 +174,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
                 <FormLabel>Amount</FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <span className="absolute left-3 top-2.5 text-muted-foreground">$</span>
+                    <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-muted-foreground">$</span>
                     <Input
                       {...field}
                       type="number"
