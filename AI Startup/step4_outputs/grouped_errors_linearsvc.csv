@@ -1,0 +1,37 @@
+text_used_by_model,actual_category,predicted_category
+[TYPE_EXPENSE] one way tour guided tour armenia,Entertainment,Shopping
+[TYPE_EXPENSE] laser tag battlefield,Entertainment,Food & Drinks
+[TYPE_EXPENSE] kairos armenia trip,Entertainment,Rent
+[TYPE_EXPENSE] alex crispy croissants x2,Food & Drinks,Gifts
+[TYPE_INCOME] minimarket,Food & Drinks,Other Income
+[TYPE_EXPENSE] nye dinner,Food & Drinks,Other Expenses
+[TYPE_EXPENSE] baguette gourmet,Food & Drinks,Shopping
+[TYPE_EXPENSE] baguette gourmet,Food & Drinks,Shopping
+[TYPE_INCOME] aboul ezz,Food & Drinks,Other Income
+[TYPE_EXPENSE] maison noura,Food & Drinks,Shopping
+[TYPE_EXPENSE] maison noura,Food & Drinks,Shopping
+[TYPE_EXPENSE] codex boardgames,Gifts,Food & Drinks
+[TYPE_INCOME] jp s birthday,Gifts,Food & Drinks
+[TYPE_EXPENSE] flora boutique,Gifts,Shopping
+[TYPE_EXPENSE] barber,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] barber,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] diner maitrise fees,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] diner maitrise fees,Other Expenses,Food & Drinks
+[TYPE_INCOME] codex tips,Salary,Food & Drinks
+[TYPE_INCOME] tips codex,Salary,Food & Drinks
+[TYPE_INCOME] tips codex,Salary,Food & Drinks
+[TYPE_INCOME] decathlon jacket,Shopping,Sports
+[TYPE_EXPENSE] decathlon jacket,Shopping,Sports
+[TYPE_INCOME] new glasses new look optic back from parents,Shopping,Food & Drinks
+[TYPE_EXPENSE] déodorant rexona,Shopping,Food & Drinks
+[TYPE_EXPENSE] pearson book mat 213,Shopping,Food & Drinks
+[TYPE_EXPENSE] kitchen craft store,Shopping,Food & Drinks
+[TYPE_EXPENSE] book nook,Shopping,Food & Drinks
+[TYPE_INCOME] ski sticks forgotten at home rental mike sport back,Sports,Salary
+[TYPE_INCOME] padel angg david gelo back,Sports,Food & Drinks
+[TYPE_EXPENSE] metrocab,Transport,Food & Drinks
+[TYPE_EXPENSE] daycab,Transport,Food & Drinks
+[TYPE_EXPENSE] car_wash,Vehicle,Food & Drinks
+[TYPE_EXPENSE] car_wash,Vehicle,Food & Drinks
+[TYPE_EXPENSE] airport to pickup tania parking,Vehicle,Transport
+[TYPE_EXPENSE] tires inflate,Vehicle,Food & Drinks

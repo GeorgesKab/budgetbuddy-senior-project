@@ -1,0 +1,31 @@
+text_used_by_model,actual_category,predicted_category
+[TYPE_EXPENSE] ride share,Transport,Transport
+[TYPE_EXPENSE] corner café - branch,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bank refund - fee,Other Income,Other Income
+[TYPE_EXPENSE] cafe,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cityfuel station,Fuel,Fuel
+[TYPE_EXPENSE] mayrig - restaurant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul bakery - verdun,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] khodr auto repair - major,Vehicle,Vehicle
+[TYPE_EXPENSE] souk el tayeb - purchase,Gifts,Gifts
+[TYPE_EXPENSE] electroworld - electronics,Shopping,Shopping
+[TYPE_INCOME] payroll,Salary,Salary
+[TYPE_EXPENSE] bakery,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] household kobeize december,Rent,Rent
+[TYPE_EXPENSE] studio home furnishings - sofa,Shopping,Shopping
+[TYPE_EXPENSE] al mandaloun - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al rihab pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Vehicle
+[TYPE_EXPENSE] al mandaloun - zouk,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] total energies - dora,Fuel,Fuel
+[TYPE_EXPENSE] shawarma,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mobile top-up,Other Expenses,Other Expenses
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] olive tree bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seto haircut,Other Expenses,Other Expenses
+[TYPE_EXPENSE] garden grill,Food & Drinks,Food & Drinks
+[TYPE_INCOME] salary - company,Salary,Salary
+[TYPE_EXPENSE] zaatar w zeit - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] total energies - station,Fuel,Fuel
+[TYPE_EXPENSE] apartment rent - october,Rent,Rent

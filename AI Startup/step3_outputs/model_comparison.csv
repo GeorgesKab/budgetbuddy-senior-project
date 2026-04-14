@@ -1,0 +1,6 @@
+model,input_variant,accuracy,macro_f1
+LinearSVC,text_plus_type,0.965,0.9691
+LinearSVC,text_only,0.964,0.9661
+Logistic Regression,text_plus_type,0.951,0.9536
+Logistic Regression,text_only,0.951,0.9516
+Dummy Most Frequent,text_only,0.2793,0.0336

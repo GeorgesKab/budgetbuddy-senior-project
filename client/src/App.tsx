@@ -8,6 +8,8 @@ import { Layout } from "@/components/layout";
 import { useAuth } from "@/hooks/use-auth";
 import { Loader2 } from "lucide-react";
 
+import { GlobalChatWidget } from "@/components/global-chat-widget";
+
 import AuthPage from "@/pages/auth";
 import Dashboard from "@/pages/dashboard";
 import TransactionsPage from "@/pages/transactions";
@@ -34,6 +36,7 @@ function ProtectedRoute({ component: Component }: { component: React.ComponentTy
   return (
     <Layout>
       <Component />
+      <GlobalChatWidget />
     </Layout>
   );
 }

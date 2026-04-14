@@ -1,0 +1,8 @@
+note,note_clean,type,type_token,amount,date_time,category,model_text_textonly,model_text_with_type
+Food,food,expense,[TYPE_EXPENSE],5,2026-04-13 08:06:41.562493,Food & Drinks,food,[TYPE_EXPENSE] food
+The Mechanic Purchase at The Mechanic,the mechanic purchase at the mechanic,expense,[TYPE_EXPENSE],3,2026-04-13 08:07:36.555690,Vehicle,the mechanic purchase at the mechanic,[TYPE_EXPENSE] the mechanic purchase at the mechanic
+Parking,parking,expense,[TYPE_EXPENSE],5,2026-04-13 08:43:55.023134,Vehicle,parking,[TYPE_EXPENSE] parking
+The Barbershop Purchase at The Barbershop,the barbershop purchase at the barbershop,expense,[TYPE_EXPENSE],15,2026-04-13 08:46:19.923162,Other Expenses,the barbershop purchase at the barbershop,[TYPE_EXPENSE] the barbershop purchase at the barbershop
+Gym,gym,expense,[TYPE_EXPENSE],5,2026-04-14 06:06:44.157205,Sports,gym,[TYPE_EXPENSE] gym
+A Notebook,a notebook,expense,[TYPE_EXPENSE],4,2026-04-14 12:21:11.541639,Shopping,a notebook,[TYPE_EXPENSE] a notebook
+Other income,other expense,income,[TYPE_EXPENSE],6,2026-04-14 12:22:14.079243,Other Income,other expense,[TYPE_EXPENSE] other expense

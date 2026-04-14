@@ -1,0 +1,19 @@
+actual,predicted,count
+Shopping,Food & Drinks,5
+Other Expenses,Food & Drinks,4
+Gifts,Food & Drinks,4
+Shopping,Entertainment,3
+Transport,Food & Drinks,2
+Vehicle,Food & Drinks,2
+Health,Food & Drinks,2
+Food & Drinks,Sports,2
+Food & Drinks,Gifts,2
+Entertainment,Food & Drinks,1
+Food & Drinks,Entertainment,1
+Salary,Other Income,1
+Food & Drinks,Shopping,1
+Fuel,Food & Drinks,1
+Shopping,Vehicle,1
+Shopping,Fuel,1
+Sports,Food & Drinks,1
+Vehicle,Transport,1

@@ -73,7 +73,7 @@ export function BalanceTrendChart({ transactions, allTransactions, startDate }: 
               <Line 
                 type="monotone" 
                 dataKey="balance" 
-                stroke="#10b981"
+                stroke="#32363f"
                 dot={false}
                 strokeWidth={2.5}
                 name="Balance"

@@ -1,4 +1,4 @@
-import { Banknote, Gift, PiggyBank, Utensils, ShoppingCart, Coffee, Car, Home, Zap, Repeat, ShoppingBag, Film, Circle, MoreHorizontal, Briefcase, Heart, Plane, BookOpen, Dumbbell, Music, Wifi, CreditCard, Smartphone, type LucideIcon, Sandwich } from "lucide-react";
+import { Banknote, Gift, PiggyBank, Utensils, ShoppingCart, TagIcon, Bus, Coffee, Car, Home, Zap, Repeat, HandCoins, ShoppingBag, Film, Circle, MoreHorizontal, Briefcase, Heart, Plane, BookOpen, Dumbbell, Music, Wifi, CreditCard, Smartphone, Fuel, type LucideIcon, Sandwich, Tag } from "lucide-react";
 
 export const ICON_OPTIONS: { value: string; label: string; Icon: LucideIcon }[] = [
   { value: "banknote", label: "Money", Icon: Banknote },
@@ -24,7 +24,11 @@ export const ICON_OPTIONS: { value: string; label: string; Icon: LucideIcon }[] 
   { value: "wifi", label: "Internet", Icon: Wifi },
   { value: "credit-card", label: "Payment", Icon: CreditCard },
   { value: "smartphone", label: "Phone", Icon: Smartphone },
-  { value: "sandwich", label: "Food", Icon: Sandwich }
+  { value: "sandwich", label: "Food", Icon: Sandwich },
+  { value: "fuel", label: "Fuel", Icon: Fuel },
+  { value: "hand-coins", label: "hand-coins", Icon: HandCoins },
+  { value: "bus", label: "bus", Icon: Bus },
+  { value: "tag", label: "tag", Icon: Tag }
 ];
 
 export function getIconComponent(iconName: string): LucideIcon {

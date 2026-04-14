@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertTransactionSchema, type Category } from "@shared/schema";
@@ -11,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useCreateTransaction, useUpdateTransaction } from "@/hooks/use-transactions";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import { predictCategory, type AutoCategorizeResponse } from "@/services/autoCategorize";
 
 // Extend the schema for the form to handle string -> number conversion and Date handling
 const formSchema = insertTransactionSchema.extend({
@@ -39,7 +41,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
   });
 
   const isEditing = !!defaultValues?.id;
-  
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -52,6 +54,45 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
     },
   });
 
+  const [aiSuggestion, setAiSuggestion] = useState<AutoCategorizeResponse | null>(null);
+  const [predictLoading, setPredictLoading] = useState(false);
+  const [predictError, setPredictError] = useState("");
+
+  const handleSuggestCategory = async () => {
+    const merchant = form.watch("merchant") || "";
+    const description = form.watch("description") || "";
+    const txType = form.watch("type") || "expense";
+
+    const noteForModel = `${merchant} ${description}`.trim();
+
+    if (!noteForModel) {
+      setPredictError("Please enter merchant or description first.");
+      return;
+    }
+
+    try {
+      setPredictLoading(true);
+      setPredictError("");
+
+      const result = await predictCategory(
+        noteForModel,
+        txType === "income" ? "Income" : "Expense",
+        3
+      );
+
+      setAiSuggestion(result);
+
+      form.setValue("category", result.predicted_category, {
+        shouldValidate: true,
+        shouldDirty: true,
+      });
+    } catch (error: any) {
+      setPredictError(error.message || "Prediction failed.");
+    } finally {
+      setPredictLoading(false);
+    }
+  };
+
   async function onSubmit(values: FormValues) {
     try {
       if (isEditing && defaultValues?.id) {
@@ -60,21 +101,39 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
           ...values,
           amount: values.amount.toString(), // Schema expects numeric string
         });
-        toast({ title: "Updated!", description: "Transaction updated successfully." });
+
+        toast({
+          title: "Updated!",
+          description: "Transaction updated successfully.",
+        });
       } else {
         await createMutation.mutateAsync({
           ...values,
           amount: values.amount.toString(),
         });
-        toast({ title: "Success!", description: "Transaction added successfully." });
+
+        toast({
+          title: "Success!",
+          description: "Transaction added successfully.",
+        });
       }
-      form.reset();
+
+      form.reset({
+        amount: "",
+        category: "",
+        description: "",
+        merchant: "",
+        type: "expense",
+        date: new Date(),
+      });
+      setAiSuggestion(null);
+      setPredictError("");
       onSuccess?.();
     } catch (error: any) {
-      toast({ 
+      toast({
         variant: "destructive",
-        title: "Error", 
-        description: error.message || "Something went wrong" 
+        title: "Error",
+        description: error.message || "Something went wrong",
       });
     }
   }
@@ -91,7 +150,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Type</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
                     <SelectTrigger className="input-field">
                       <SelectValue placeholder="Select type" />
@@ -116,7 +175,13 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
                 <FormControl>
                   <div className="relative">
                     <span className="absolute left-3 top-2.5 text-muted-foreground">$</span>
-                    <Input {...field} type="number" step="0.01" className="pl-7 input-field" placeholder="0.00" />
+                    <Input
+                      {...field}
+                      type="number"
+                      step="0.01"
+                      className="pl-7 input-field"
+                      placeholder="0.00"
+                    />
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -130,19 +195,21 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
           name="category"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Category <span className="text-red-500">*</span></FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormLabel>
+                Category <span className="text-red-500">*</span>
+              </FormLabel>
+              <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
                   <SelectTrigger className="input-field">
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                    {customCategories?.map((cat) => (
-                        <SelectItem key={cat.id} value={cat.name}>
-                            {cat.name}
-                        </SelectItem>
-                    ))}
+                  {customCategories?.map((cat) => (
+                    <SelectItem key={cat.id} value={cat.name}>
+                      {cat.name}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -157,11 +224,17 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
             <FormItem>
               <FormLabel>Date</FormLabel>
               <FormControl>
-                <Input 
-                  type="date" 
-                  className="input-field block w-full" 
-                  {...field} 
-                  value={field.value instanceof Date ? field.value.toISOString().split('T')[0] : field.value}
+                <Input
+                  type="date"
+                  className="input-field block w-full"
+                  value={
+                    field.value instanceof Date
+                      ? field.value.toISOString().split("T")[0]
+                      : field.value
+                        ? new Date(field.value).toISOString().split("T")[0]
+                        : ""
+                  }
+                  onChange={(e) => field.onChange(e.target.value)}
                 />
               </FormControl>
               <FormMessage />
@@ -197,8 +270,51 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
           )}
         />
 
-        <Button 
-          type="submit" 
+        <div className="space-y-3">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={handleSuggestCategory}
+            disabled={predictLoading}
+            className="w-full"
+          >
+            {predictLoading ? "Predicting..." : "Suggest category"}
+          </Button>
+
+          {predictError && (
+            <p className="text-sm text-red-500">{predictError}</p>
+          )}
+
+          {aiSuggestion && (
+            <div className="rounded-lg border p-4 space-y-2">
+              <p>
+                <strong>Suggested category:</strong> {aiSuggestion.predicted_category}
+              </p>
+
+              <p className="text-sm text-muted-foreground break-all">
+                <strong>Model text used:</strong> {aiSuggestion.model_text}
+              </p>
+
+              <div>
+                <p className="font-medium">Top alternatives:</p>
+                <ul className="list-disc ml-5 text-sm text-muted-foreground">
+                  {aiSuggestion.top_predictions.map((pred) => (
+                    <li key={pred.category}>
+                      {pred.category} ({pred.score.toFixed(3)})
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="text-xs text-muted-foreground">
+                These are ranking scores, not probabilities.
+              </p>
+            </div>
+          )}
+        </div>
+
+        <Button
+          type="submit"
           disabled={isPending}
           className="w-full"
         >

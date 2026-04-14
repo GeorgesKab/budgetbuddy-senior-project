@@ -1,0 +1,43 @@
+{
+  "model_name": "BudgetBuddy Auto-Categorization",
+  "task": "multiclass text classification",
+  "input_variant": "type_token + note_clean",
+  "vectorizer": {
+    "name": "TfidfVectorizer",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "sublinear_tf": true
+  },
+  "classifier": {
+    "name": "LinearSVC"
+  },
+  "training_rows": 5002,
+  "num_classes": 13,
+  "classes": [
+    "Entertainment",
+    "Food & Drinks",
+    "Fuel",
+    "Gifts",
+    "Health",
+    "Other Expenses",
+    "Other Income",
+    "Rent",
+    "Salary",
+    "Shopping",
+    "Sports",
+    "Transport",
+    "Vehicle"
+  ],
+  "feedback_rows_added": 7,
+  "retrained_at": "2026-04-14T12:32:36.514582+00:00",
+  "retraining_evaluation": {
+    "accuracy": 0.9702,
+    "macro_f1": 0.9658,
+    "train_rows": 4028,
+    "test_rows": 974,
+    "unique_groups": 2337
+  }
+}

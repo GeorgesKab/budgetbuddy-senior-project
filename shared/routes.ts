@@ -1,6 +1,23 @@
 import { z } from 'zod';
 import { insertUserSchema, insertTransactionSchema, insertCategorySchema, transactions, users, categories } from './schema';
 
+const rankedPredictionSchema = z.object({
+  category: z.string(),
+  score: z.number(),
+});
+
+const transactionAiMetaSchema = z.object({
+  modelName: z.string(),
+  inputVariant: z.string(),
+  cleanedNote: z.string(),
+  typeToken: z.string(),
+  modelText: z.string(),
+  predictedCategory: z.string(),
+  topPredictions: z.array(rankedPredictionSchema),
+  suggestionAccepted: z.boolean(),
+  userCorrected: z.boolean(),
+});
+
 export const errorSchemas = {
   validation: z.object({
     message: z.string(),
@@ -78,6 +95,7 @@ export const api = {
         date: z.coerce.date(),
         merchant: z.string().default(""),
         category: z.string().min(1, "Category is required"),
+        aiMeta: transactionAiMetaSchema.nullable().optional(),
       }),
       responses: {
         201: z.custom<typeof transactions.$inferSelect>(),
@@ -92,6 +110,7 @@ export const api = {
         date: z.coerce.date().optional(),
         merchant: z.string().optional(),
         category: z.string().min(1, "Category is required").optional(),
+        aiMeta: transactionAiMetaSchema.nullable().optional(),
       }),
       responses: {
         200: z.custom<typeof transactions.$inferSelect>(),

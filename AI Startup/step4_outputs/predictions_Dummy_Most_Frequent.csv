@@ -1,0 +1,865 @@
+text_used_by_model,actual_category,predicted_category
+[TYPE_EXPENSE] one way tour guided tour armenia,Entertainment,Food & Drinks
+[TYPE_EXPENSE] cinema - mission impossible,Entertainment,Food & Drinks
+[TYPE_EXPENSE] cinema popcorn deadpool,Entertainment,Food & Drinks
+[TYPE_EXPENSE] bad boys vox cinema popcorn caramel,Entertainment,Food & Drinks
+[TYPE_EXPENSE] laser tag battlefield,Entertainment,Food & Drinks
+[TYPE_EXPENSE] escape the room codex upside down,Entertainment,Food & Drinks
+[TYPE_EXPENSE] kairos armenia trip,Entertainment,Food & Drinks
+[TYPE_EXPENSE] live music ticket - hamra,Entertainment,Food & Drinks
+[TYPE_EXPENSE] comedy night ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming service - annual,Entertainment,Food & Drinks
+[TYPE_EXPENSE] beirut jazz club,Entertainment,Food & Drinks
+[TYPE_EXPENSE] classical concert - hall,Entertainment,Food & Drinks
+[TYPE_EXPENSE] comedy club night - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] indie film night - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] zouk mikael concert,Entertainment,Food & Drinks
+[TYPE_EXPENSE] theater play - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming service - monthly,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming annual plan,Entertainment,Food & Drinks
+[TYPE_EXPENSE] byblos festival - vip,Entertainment,Food & Drinks
+[TYPE_EXPENSE] live theater - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] outdoor concert - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming service - monthly,Entertainment,Food & Drinks
+[TYPE_EXPENSE] zouk mikael - concert,Entertainment,Food & Drinks
+[TYPE_EXPENSE] theater play - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] byblos international festival - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] theater play - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] indie film night - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] beirut jazz club,Entertainment,Food & Drinks
+[TYPE_EXPENSE] classical concert - hall,Entertainment,Food & Drinks
+[TYPE_EXPENSE] comedy club night - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] beirut jazz club,Entertainment,Food & Drinks
+[TYPE_EXPENSE] cinema city - screening,Entertainment,Food & Drinks
+[TYPE_EXPENSE] classical concert - hall,Entertainment,Food & Drinks
+[TYPE_EXPENSE] indie film night - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] byblos casino night ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming subscription - monthly,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming service - monthly fee,Entertainment,Food & Drinks
+[TYPE_EXPENSE] theatre square play,Entertainment,Food & Drinks
+[TYPE_EXPENSE] cultural festival entry,Entertainment,Food & Drinks
+[TYPE_EXPENSE] byblos casino night ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming subscription - monthly,Entertainment,Food & Drinks
+[TYPE_EXPENSE] streaming service - monthly fee,Entertainment,Food & Drinks
+[TYPE_EXPENSE] theatre square play,Entertainment,Food & Drinks
+[TYPE_EXPENSE] cultural festival entry,Entertainment,Food & Drinks
+[TYPE_EXPENSE] festival grounds - entry,Entertainment,Food & Drinks
+[TYPE_EXPENSE] indie film night - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] indie film night ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] cultural festival entry,Entertainment,Food & Drinks
+[TYPE_EXPENSE] summer festival ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] music hall,Entertainment,Food & Drinks
+[TYPE_EXPENSE] live theater ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] cultural festival entry,Entertainment,Food & Drinks
+[TYPE_EXPENSE] indie film night - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] byblos vip ticket - event,Entertainment,Food & Drinks
+[TYPE_EXPENSE] live theater - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] outdoor concert - ticket,Entertainment,Food & Drinks
+[TYPE_EXPENSE] open mic night,Entertainment,Food & Drinks
+[TYPE_EXPENSE] caramel frappe mcdo,Food & Drinks,Food & Drinks
+[TYPE_INCOME] saniour restaurant back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] saniour restaurant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] alex crispy croissants x2,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] croissant gum,Food & Drinks,Food & Drinks
+[TYPE_INCOME] kahuna cocktails dimi back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] kahuna cocktails dimi,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bachir ice cream,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bachir ice cream,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mango juice,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cake antoine,Food & Drinks,Food & Drinks
+[TYPE_INCOME] spinneys bach back,Shopping,Food & Drinks
+[TYPE_INCOME] minimarket,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] minimarket,Food & Drinks,Food & Drinks
+[TYPE_INCOME] deodorant gums back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bechara bros cheese mankouche,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sandwich codex,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chips gum,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] minimarket,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] minimarket,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bread moulin,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] nye dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] clara s birthday food,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] big water bottle paul khoury,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arnabeet,Food & Drinks,Food & Drinks
+[TYPE_INCOME] potato sandwich ndu back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sandwich w noss arnabit,Food & Drinks,Food & Drinks
+[TYPE_INCOME] potato sandwich ndu back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sandwish potato ndu,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baguette gourmet,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baguette gourmet,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] malak al tawouk dan hrant yorgo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arrouk,Food & Drinks,Food & Drinks
+[TYPE_INCOME] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bechara bros with georges,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bechara bros with georges,Food & Drinks,Food & Drinks
+[TYPE_INCOME] aboul ezz,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] aboul ezz,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] malak al tawouk angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] beit halab,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bk cdc,Food & Drinks,Food & Drinks
+[TYPE_INCOME] ekht mankouche mf back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arnabeet,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mankouche zaatar extra,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arnabeet,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] ld bread,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_INCOME] le flocon back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mankouche zaatar extra,Food & Drinks,Food & Drinks
+[TYPE_INCOME] francity for guardes back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zwz bk tania paid,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baklava for johan,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo et,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bchara freres,Food & Drinks,Food & Drinks
+[TYPE_INCOME] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bachir ice cream,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] falafel abou andre,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] fries sandwich malak,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk tony,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bk tony,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] attic 57,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] croissant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cake in a can,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] falafel abou andre,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] falafel abou andre,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] nyc pizzeria,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roadster with angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bartartine with angg 1st date,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo sundae,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] montana pizza,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] montana pizza,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pepsi diet,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bechara bros,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] luna s restaurant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sud,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roadster with angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roadster with angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] manousheh corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - verdun,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] manousheh,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - verdun,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] manousheh corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez maguy,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] babel,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul - bakery,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café younes - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou hassan,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] snack corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al fawanees - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] beirut garden cafe,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mankoushe express,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] maison noura,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] green table,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harissa grill,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & lemon,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] la petite table - zaitunay,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] green table - café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harissa grill - restaurant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the lebanese spoon - diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - beirut,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul - verdun,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] tawlet - beirut,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café younes - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] t marbouta - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du liban,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] marina seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the olive room,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al halabi - downtown,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al fawanees - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez zakhia - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café hamra - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc - brunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al fawanees - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - rooftop,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al soussi - pastry,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] barbar - shawarma,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] babel - mezze,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul - bakery,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - verdun,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] liza - downtown,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] liza - downtown,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harissa grill - restaurant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the lebanese spoon - diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou hassan,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] babel,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez maguy,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - main,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] maison noura,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - rooftop,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] t marbouta bakery,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] ferdinand café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cafe yammouni - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul bakery - pastries,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] tawlet - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - branch meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mayrig - family dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] maison du pain,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] hamra grill,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] noura s kitchen,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the green table,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] snack & go corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the olive room,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cedar & spice café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - rooftop,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] t marbouta bakery,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] ferdinand café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cafe yammouni - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul bakery - pastries,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] tawlet - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - branch meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mayrig - family dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] maison du pain,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] hamra grill,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] noura s kitchen,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the green table,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] snack & go corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the olive room,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cedar & spice café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] beirut bites - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] le comptoir - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the green table - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & fig bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] morning brew house,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] lebanese spoon diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside café meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café mosaic,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] street shawarma stand,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harissa grill,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & lemon,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the olive room,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al baba downtown,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc brunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] snack corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the mezze collective - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bistro by the bay - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] corner café branch - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill dinner - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baker s corner - breakfast,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou tarek - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al dente trattoria - pasta,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] babel - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez zakhia - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café hamra - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc - brunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al fawanees - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café sawa,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seasons café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café botanica,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] saffron café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café sawa - breakfast,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] not into consideration crisis medco kfardebian nassab,Fuel,Food & Drinks
+[TYPE_INCOME] camp noel fuel,Fuel,Food & Drinks
+[TYPE_EXPENSE] gasoline - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] gasoline - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] gasoline - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] local petrol station,Fuel,Food & Drinks
+[TYPE_EXPENSE] alfa fuel station,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora fuel station,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell - branch,Fuel,Food & Drinks
+[TYPE_EXPENSE] petrol one - branch,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell - main,Fuel,Food & Drinks
+[TYPE_EXPENSE] city fuel station,Fuel,Food & Drinks
+[TYPE_EXPENSE] fuelhub,Fuel,Food & Drinks
+[TYPE_EXPENSE] express petrol - station,Fuel,Food & Drinks
+[TYPE_EXPENSE] north fuel station - pump,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell station - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora fuel - station,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell - main station,Fuel,Food & Drinks
+[TYPE_EXPENSE] cityfuel - main,Fuel,Food & Drinks
+[TYPE_EXPENSE] petroserve station,Fuel,Food & Drinks
+[TYPE_EXPENSE] fuelpoint - east,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora pump,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell express,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora fuel - station,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell - branch,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell station - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell station - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] express petrol - station,Fuel,Food & Drinks
+[TYPE_EXPENSE] north fuel station - pump,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell station - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] local petrol station - pump,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell station - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] gulf fuel,Fuel,Food & Drinks
+[TYPE_EXPENSE] local petrol station - pump,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell station - jounieh,Fuel,Food & Drinks
+[TYPE_EXPENSE] gulf fuel,Fuel,Food & Drinks
+[TYPE_EXPENSE] sunrise fuel station - fill,Fuel,Food & Drinks
+[TYPE_EXPENSE] north fuel station - pump,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora fuel station,Fuel,Food & Drinks
+[TYPE_EXPENSE] jounieh shell pump,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora fuel stop,Fuel,Food & Drinks
+[TYPE_EXPENSE] jounieh fuel hub,Fuel,Food & Drinks
+[TYPE_EXPENSE] north fuel,Fuel,Food & Drinks
+[TYPE_EXPENSE] fuelhub,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora fuel station,Fuel,Food & Drinks
+[TYPE_EXPENSE] shell main station,Fuel,Food & Drinks
+[TYPE_EXPENSE] fuelhub station - fill,Fuel,Food & Drinks
+[TYPE_EXPENSE] dora fuel - station,Fuel,Food & Drinks
+[TYPE_EXPENSE] machh jacket sdl gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] gift azzi dongle,Gifts,Food & Drinks
+[TYPE_INCOME] christmas mom pt 1 back,Gifts,Food & Drinks
+[TYPE_EXPENSE] to antoine & dibo gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] codex boardgames,Gifts,Food & Drinks
+[TYPE_INCOME] jp s birthday,Gifts,Food & Drinks
+[TYPE_EXPENSE] handmade crafts shop,Gifts,Food & Drinks
+[TYPE_EXPENSE] chocolate boutique,Gifts,Food & Drinks
+[TYPE_EXPENSE] gift emporium,Gifts,Food & Drinks
+[TYPE_EXPENSE] beirut crafts,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan corner,Gifts,Food & Drinks
+[TYPE_EXPENSE] handmade boutique,Gifts,Food & Drinks
+[TYPE_EXPENSE] chocolate house,Gifts,Food & Drinks
+[TYPE_EXPENSE] small gifts corner,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts co,Gifts,Food & Drinks
+[TYPE_EXPENSE] silk & spice gifts - shop,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Food & Drinks
+[TYPE_EXPENSE] craft market - stall,Gifts,Food & Drinks
+[TYPE_EXPENSE] maison des fleurs - arrangement,Gifts,Food & Drinks
+[TYPE_EXPENSE] handmade crafts - market,Gifts,Food & Drinks
+[TYPE_EXPENSE] souk el tayeb - specialty,Gifts,Food & Drinks
+[TYPE_EXPENSE] handmade crafts - market,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Food & Drinks
+[TYPE_EXPENSE] beirut crafts - handicraft,Gifts,Food & Drinks
+[TYPE_EXPENSE] silk & spice gifts - shop,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Food & Drinks
+[TYPE_EXPENSE] beirut crafts,Gifts,Food & Drinks
+[TYPE_EXPENSE] maison du cadeau,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts co,Gifts,Food & Drinks
+[TYPE_EXPENSE] chocolate boutique,Gifts,Food & Drinks
+[TYPE_EXPENSE] beirut crafts - handicraft,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Food & Drinks
+[TYPE_EXPENSE] boutique treasures - gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] chocolate boutique - box,Gifts,Food & Drinks
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] bloom florist,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts company,Gifts,Food & Drinks
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] bloom florist,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts company,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan alley - gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] bloom florist - bouquet,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan gifts company,Gifts,Food & Drinks
+[TYPE_EXPENSE] artisan corner,Gifts,Food & Drinks
+[TYPE_EXPENSE] handmade boutique,Gifts,Food & Drinks
+[TYPE_EXPENSE] chocolate house,Gifts,Food & Drinks
+[TYPE_EXPENSE] olive wood crafts - gift,Gifts,Food & Drinks
+[TYPE_EXPENSE] art & gift studio - purchase,Gifts,Food & Drinks
+[TYPE_EXPENSE] flora boutique,Gifts,Food & Drinks
+[TYPE_EXPENSE] little treasures,Gifts,Food & Drinks
+[TYPE_EXPENSE] panadol big,Health,Food & Drinks
+[TYPE_EXPENSE] detartrage usj alex bassil,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] clinic visit - hamra,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] clinic visit,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] rafik hariri university hospital,Health,Food & Drinks
+[TYPE_EXPENSE] green pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] diagnostic center,Health,Food & Drinks
+[TYPE_EXPENSE] prime clinic,Health,Food & Drinks
+[TYPE_EXPENSE] prime clinic - visit,Health,Food & Drinks
+[TYPE_EXPENSE] al rihab pharmacy - hamra,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - visit,Health,Food & Drinks
+[TYPE_EXPENSE] wellness diagnostics,Health,Food & Drinks
+[TYPE_EXPENSE] healthfirst clinic,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic - visit,Health,Food & Drinks
+[TYPE_EXPENSE] medcare - consultation,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - visit,Health,Food & Drinks
+[TYPE_EXPENSE] prime clinic - visit,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic - visit,Health,Food & Drinks
+[TYPE_EXPENSE] rafik hariri university hospital,Health,Food & Drinks
+[TYPE_EXPENSE] prime clinic,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - visit,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - visit,Health,Food & Drinks
+[TYPE_EXPENSE] aubmc clinic - specialist,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - lab,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - visit,Health,Food & Drinks
+[TYPE_EXPENSE] careplus pharmacy purchase,Health,Food & Drinks
+[TYPE_EXPENSE] diagnostic center test,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Food & Drinks
+[TYPE_EXPENSE] healthfirst clinic,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - visit,Health,Food & Drinks
+[TYPE_EXPENSE] aubmc clinic - specialist,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - lab,Health,Food & Drinks
+[TYPE_EXPENSE] clemenceau medical center - visit,Health,Food & Drinks
+[TYPE_EXPENSE] careplus pharmacy purchase,Health,Food & Drinks
+[TYPE_EXPENSE] diagnostic center test,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Food & Drinks
+[TYPE_EXPENSE] healthfirst clinic,Health,Food & Drinks
+[TYPE_EXPENSE] prime clinic - visit,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic - visit,Health,Food & Drinks
+[TYPE_EXPENSE] careplus pharmacy purchase,Health,Food & Drinks
+[TYPE_EXPENSE] diagnostic center test,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Food & Drinks
+[TYPE_EXPENSE] prime clinic,Health,Food & Drinks
+[TYPE_EXPENSE] healthfirst clinic,Health,Food & Drinks
+[TYPE_EXPENSE] green pharmacy,Health,Food & Drinks
+[TYPE_EXPENSE] specialist consultation,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy central,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Food & Drinks
+[TYPE_EXPENSE] healthpoint clinic - visit,Health,Food & Drinks
+[TYPE_EXPENSE] city diagnostics - test,Health,Food & Drinks
+[TYPE_INCOME] seto haircut back,Other Expenses,Food & Drinks
+[TYPE_INCOME] seto haircut back,Other Expenses,Food & Drinks
+[TYPE_INCOME] seto haircut back,Other Expenses,Food & Drinks
+[TYPE_INCOME] seto haircut back,Other Expenses,Food & Drinks
+[TYPE_INCOME] seto haircut back,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] seto haircut beard only,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] barber,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] barber,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] formation 2 men s retreat fee,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] karim s birthday fee,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] karim s birthday fee,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] summit fee,Other Expenses,Food & Drinks
+[TYPE_INCOME] uco celebration fees back,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] diner maitrise fees,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] diner maitrise fees,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] hh debt fees,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] service fee,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] service fee,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] atm fee,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] phone bill - provider,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] courier - delivery,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] courier - express,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] bank service fee - charge,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] utility payment - monthly,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] utility payment - monthly,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] utility payment - monthly,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] parking lot fee,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] express courier,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] parking lot - fee,Other Expenses,Food & Drinks
+[TYPE_INCOME] april allowance,Other Income,Food & Drinks
+[TYPE_INCOME] november allowance,Other Income,Food & Drinks
+[TYPE_INCOME] august allowance,Other Income,Food & Drinks
+[TYPE_INCOME] november allowance,Other Income,Food & Drinks
+[TYPE_INCOME] august allowance,Other Income,Food & Drinks
+[TYPE_INCOME] khalto samia bonus,Other Income,Food & Drinks
+[TYPE_INCOME] august allowance,Other Income,Food & Drinks
+[TYPE_INCOME] april allowance,Other Income,Food & Drinks
+[TYPE_INCOME] car fix allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] mom allowance,Other Income,Food & Drinks
+[TYPE_INCOME] mom allowance,Other Income,Food & Drinks
+[TYPE_INCOME] allowance,Other Income,Food & Drinks
+[TYPE_INCOME] cashback reward,Other Income,Food & Drinks
+[TYPE_INCOME] cashback - bank,Other Income,Food & Drinks
+[TYPE_INCOME] card refund,Other Income,Food & Drinks
+[TYPE_INCOME] insurance refund,Other Income,Food & Drinks
+[TYPE_INCOME] cashback reward - bank,Other Income,Food & Drinks
+[TYPE_INCOME] insurance refund,Other Income,Food & Drinks
+[TYPE_INCOME] insurance refund,Other Income,Food & Drinks
+[TYPE_INCOME] insurance refund,Other Income,Food & Drinks
+[TYPE_INCOME] insurance refund claim,Other Income,Food & Drinks
+[TYPE_INCOME] insurance refund,Other Income,Food & Drinks
+[TYPE_INCOME] cashback reward,Other Income,Food & Drinks
+[TYPE_INCOME] retail refund - credit,Other Income,Food & Drinks
+[TYPE_INCOME] retail refund - credit,Other Income,Food & Drinks
+[TYPE_INCOME] cashback reward - bank,Other Income,Food & Drinks
+[TYPE_INCOME] refund - online store,Other Income,Food & Drinks
+[TYPE_INCOME] cashback reward,Other Income,Food & Drinks
+[TYPE_INCOME] cashback reward,Other Income,Food & Drinks
+[TYPE_EXPENSE] household kobeize october,Rent,Food & Drinks
+[TYPE_INCOME] pog household subsidy,Rent,Food & Drinks
+[TYPE_EXPENSE] household february,Rent,Food & Drinks
+[TYPE_INCOME] pog household subsidy,Rent,Food & Drinks
+[TYPE_EXPENSE] household february,Rent,Food & Drinks
+[TYPE_EXPENSE] household december,Rent,Food & Drinks
+[TYPE_EXPENSE] household kobeize may,Rent,Food & Drinks
+[TYPE_EXPENSE] household kobeize january,Rent,Food & Drinks
+[TYPE_EXPENSE] household,Rent,Food & Drinks
+[TYPE_EXPENSE] household,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - may,Rent,Food & Drinks
+[TYPE_EXPENSE] apartment rent - may,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - december,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - february,Rent,Food & Drinks
+[TYPE_EXPENSE] apartment rent - may,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - december,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - january,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - december,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - february,Rent,Food & Drinks
+[TYPE_EXPENSE] apartment rent - may,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - may,Rent,Food & Drinks
+[TYPE_EXPENSE] apartment rent - may,Rent,Food & Drinks
+[TYPE_EXPENSE] monthly rent - december,Rent,Food & Drinks
+[TYPE_INCOME] codex last,Salary,Food & Drinks
+[TYPE_INCOME] codex tips,Salary,Food & Drinks
+[TYPE_INCOME] tips codex,Salary,Food & Drinks
+[TYPE_INCOME] tips codex,Salary,Food & Drinks
+[TYPE_INCOME] mindflares,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] salary transfer,Salary,Food & Drinks
+[TYPE_INCOME] payroll - company,Salary,Food & Drinks
+[TYPE_INCOME] payroll - transfer,Salary,Food & Drinks
+[TYPE_INCOME] salary payment,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] company payroll - transfer,Salary,Food & Drinks
+[TYPE_INCOME] payroll - employer c,Salary,Food & Drinks
+[TYPE_INCOME] payroll - transfer,Salary,Food & Drinks
+[TYPE_INCOME] payroll - june,Salary,Food & Drinks
+[TYPE_INCOME] payroll - august,Salary,Food & Drinks
+[TYPE_INCOME] payroll - september,Salary,Food & Drinks
+[TYPE_INCOME] company payroll - deposit,Salary,Food & Drinks
+[TYPE_INCOME] company payroll - deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] salary payment,Salary,Food & Drinks
+[TYPE_INCOME] payroll deposit,Salary,Food & Drinks
+[TYPE_INCOME] decathlon jacket,Shopping,Food & Drinks
+[TYPE_EXPENSE] decathlon jacket,Shopping,Food & Drinks
+[TYPE_EXPENSE] zara,Shopping,Food & Drinks
+[TYPE_EXPENSE] zara,Shopping,Food & Drinks
+[TYPE_INCOME] new glasses new look optic back from parents,Shopping,Food & Drinks
+[TYPE_EXPENSE] déodorant rexona,Shopping,Food & Drinks
+[TYPE_INCOME] maliks printings,Shopping,Food & Drinks
+[TYPE_EXPENSE] maliks printings,Shopping,Food & Drinks
+[TYPE_EXPENSE] pearson book mat 213,Shopping,Food & Drinks
+[TYPE_EXPENSE] ishtari tania s gifts,Shopping,Food & Drinks
+[TYPE_INCOME] karout mall back,Shopping,Food & Drinks
+[TYPE_EXPENSE] clothing store - verdun,Shopping,Food & Drinks
+[TYPE_EXPENSE] the one,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - furniture,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - outlet,Shopping,Food & Drinks
+[TYPE_EXPENSE] spinneys - branch,Shopping,Food & Drinks
+[TYPE_EXPENSE] home center lebanon,Shopping,Food & Drinks
+[TYPE_EXPENSE] the little shop,Shopping,Food & Drinks
+[TYPE_EXPENSE] galleria beirut,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion hub,Shopping,Food & Drinks
+[TYPE_EXPENSE] home goods store,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury home store,Shopping,Food & Drinks
+[TYPE_EXPENSE] tech store,Shopping,Food & Drinks
+[TYPE_EXPENSE] gourmet grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane,Shopping,Food & Drinks
+[TYPE_EXPENSE] decor house,Shopping,Food & Drinks
+[TYPE_EXPENSE] le marché boutique - souks,Shopping,Food & Drinks
+[TYPE_EXPENSE] corner fashion - mall,Shopping,Food & Drinks
+[TYPE_EXPENSE] gourmet grocer - specialty,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane - grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] green market - produce,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion district - store,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds - boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] zara - beirut,Shopping,Food & Drinks
+[TYPE_EXPENSE] aub bookstore - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - homeware,Shopping,Food & Drinks
+[TYPE_EXPENSE] spinneys - weekly groceries,Shopping,Food & Drinks
+[TYPE_EXPENSE] design atelier,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury interiors,Shopping,Food & Drinks
+[TYPE_EXPENSE] home essentials,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion lane,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds - boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - home collection,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - furniture,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] electronics corner - tv,Shopping,Food & Drinks
+[TYPE_EXPENSE] home center - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] carrefour - city center,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - furniture,Shopping,Food & Drinks
+[TYPE_EXPENSE] spinneys - branch,Shopping,Food & Drinks
+[TYPE_EXPENSE] aub bookstore - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - fashion purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] home center - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion district - outlet,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds - boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - homeware,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane - grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] green market - produce,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion district - store,Shopping,Food & Drinks
+[TYPE_EXPENSE] carrefour,Shopping,Food & Drinks
+[TYPE_EXPENSE] galeries lafayette,Shopping,Food & Drinks
+[TYPE_EXPENSE] the one,Shopping,Food & Drinks
+[TYPE_EXPENSE] gourmet grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] carrefour - city center,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - homeware,Shopping,Food & Drinks
+[TYPE_EXPENSE] gourmet grocer - specialty,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury interiors,Shopping,Food & Drinks
+[TYPE_EXPENSE] zara - achrafieh,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - furniture purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] aub bookstore - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - fashion purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] spinneys - grocery run,Shopping,Food & Drinks
+[TYPE_EXPENSE] phoenicia books,Shopping,Food & Drinks
+[TYPE_EXPENSE] techpoint gadgets,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion district store,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] gadget hub electronics,Shopping,Food & Drinks
+[TYPE_EXPENSE] zara - achrafieh,Shopping,Food & Drinks
+[TYPE_EXPENSE] bou khalil - furniture purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] aub bookstore - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] aïshti - fashion purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] spinneys - grocery run,Shopping,Food & Drinks
+[TYPE_EXPENSE] phoenicia books,Shopping,Food & Drinks
+[TYPE_EXPENSE] techpoint gadgets,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion district store,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] gadget hub electronics,Shopping,Food & Drinks
+[TYPE_EXPENSE] kids play store - toy,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion district - store,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds - boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] corner market grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion district store,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] kitchen craft store,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane grocer,Shopping,Food & Drinks
+[TYPE_EXPENSE] decor house,Shopping,Food & Drinks
+[TYPE_EXPENSE] the little shop,Shopping,Food & Drinks
+[TYPE_EXPENSE] galleria beirut,Shopping,Food & Drinks
+[TYPE_EXPENSE] fashion hub,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Food & Drinks
+[TYPE_EXPENSE] techpoint electronics - buy,Shopping,Food & Drinks
+[TYPE_EXPENSE] market lane grocer - groceries,Shopping,Food & Drinks
+[TYPE_EXPENSE] electra home - furniture,Shopping,Food & Drinks
+[TYPE_EXPENSE] luxury finds - purchase,Shopping,Food & Drinks
+[TYPE_EXPENSE] book nook,Shopping,Food & Drinks
+[TYPE_EXPENSE] ping pong rebound,Sports,Food & Drinks
+[TYPE_EXPENSE] football bounce,Sports,Food & Drinks
+[TYPE_EXPENSE] frisbee fouad chehab satro,Sports,Food & Drinks
+[TYPE_INCOME] ski sticks forgotten at home rental mike sport back,Sports,Food & Drinks
+[TYPE_EXPENSE] padel padek,Sports,Food & Drinks
+[TYPE_EXPENSE] ski season rentals picblanc,Sports,Food & Drinks
+[TYPE_EXPENSE] padel angg david gelo,Sports,Food & Drinks
+[TYPE_INCOME] padel angg david gelo back,Sports,Food & Drinks
+[TYPE_EXPENSE] padel,Sports,Food & Drinks
+[TYPE_EXPENSE] padel,Sports,Food & Drinks
+[TYPE_EXPENSE] padel,Sports,Food & Drinks
+[TYPE_EXPENSE] padel,Sports,Food & Drinks
+[TYPE_INCOME] padel back,Sports,Food & Drinks
+[TYPE_EXPENSE] padel,Sports,Food & Drinks
+[TYPE_EXPENSE] padel,Sports,Food & Drinks
+[TYPE_EXPENSE] ski,Sports,Food & Drinks
+[TYPE_EXPENSE] ski,Sports,Food & Drinks
+[TYPE_EXPENSE] ski,Sports,Food & Drinks
+[TYPE_EXPENSE] ski,Sports,Food & Drinks
+[TYPE_EXPENSE] urban fitness club - membership,Sports,Food & Drinks
+[TYPE_EXPENSE] run club,Sports,Food & Drinks
+[TYPE_EXPENSE] tennis club fee,Sports,Food & Drinks
+[TYPE_EXPENSE] taxi back,Transport,Food & Drinks
+[TYPE_EXPENSE] taxi service - airport,Transport,Food & Drinks
+[TYPE_EXPENSE] careem ride,Transport,Food & Drinks
+[TYPE_EXPENSE] taxi - day,Transport,Food & Drinks
+[TYPE_EXPENSE] intercity coach,Transport,Food & Drinks
+[TYPE_EXPENSE] local taxi,Transport,Food & Drinks
+[TYPE_EXPENSE] regional coach,Transport,Food & Drinks
+[TYPE_EXPENSE] metro taxi - night,Transport,Food & Drinks
+[TYPE_EXPENSE] city shuttle - route b,Transport,Food & Drinks
+[TYPE_EXPENSE] metrocab,Transport,Food & Drinks
+[TYPE_EXPENSE] city shuttle - line 2,Transport,Food & Drinks
+[TYPE_EXPENSE] daycab,Transport,Food & Drinks
+[TYPE_EXPENSE] regional shuttle,Transport,Food & Drinks
+[TYPE_EXPENSE] careem - short ride,Transport,Food & Drinks
+[TYPE_EXPENSE] airport shuttle - booking,Transport,Food & Drinks
+[TYPE_EXPENSE] careem - short ride,Transport,Food & Drinks
+[TYPE_EXPENSE] intercity shuttle - fare,Transport,Food & Drinks
+[TYPE_EXPENSE] local taxi service,Transport,Food & Drinks
+[TYPE_EXPENSE] regional coach ticket,Transport,Food & Drinks
+[TYPE_EXPENSE] intercity shuttle - fare,Transport,Food & Drinks
+[TYPE_EXPENSE] local taxi service,Transport,Food & Drinks
+[TYPE_EXPENSE] regional coach ticket,Transport,Food & Drinks
+[TYPE_EXPENSE] local taxi service - fare,Transport,Food & Drinks
+[TYPE_EXPENSE] regional coach ticket,Transport,Food & Drinks
+[TYPE_EXPENSE] cityride taxi,Transport,Food & Drinks
+[TYPE_EXPENSE] intercity coach,Transport,Food & Drinks
+[TYPE_EXPENSE] local taxi,Transport,Food & Drinks
+[TYPE_EXPENSE] regional coach,Transport,Food & Drinks
+[TYPE_EXPENSE] regional shuttle,Transport,Food & Drinks
+[TYPE_EXPENSE] regional coach ticket,Transport,Food & Drinks
+[TYPE_EXPENSE] night cab,Transport,Food & Drinks
+[TYPE_EXPENSE] airport shuttle co,Transport,Food & Drinks
+[TYPE_EXPENSE] metro taxi - ride,Transport,Food & Drinks
+[TYPE_INCOME] 4 wheels change car,Vehicle,Food & Drinks
+[TYPE_EXPENSE] washed the car,Vehicle,Food & Drinks
+[TYPE_EXPENSE] washed the car,Vehicle,Food & Drinks
+[TYPE_EXPENSE] car_wash,Vehicle,Food & Drinks
+[TYPE_EXPENSE] car_wash,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_INCOME] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_INCOME] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] mzaar ski resort parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] ski mzaar pk,Vehicle,Food & Drinks
+[TYPE_EXPENSE] airport to pickup tania parking,Vehicle,Food & Drinks
+[TYPE_EXPENSE] tires inflate,Vehicle,Food & Drinks
+[TYPE_EXPENSE] oil filter change,Vehicle,Food & Drinks
+[TYPE_EXPENSE] 4 wheels change,Vehicle,Food & Drinks
+[TYPE_EXPENSE] car wash express,Vehicle,Food & Drinks
+[TYPE_EXPENSE] car wash express,Vehicle,Food & Drinks
+[TYPE_EXPENSE] car wash express,Vehicle,Food & Drinks
+[TYPE_EXPENSE] nissan service center,Vehicle,Food & Drinks
+[TYPE_EXPENSE] battery shop,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autocare lebanon,Vehicle,Food & Drinks
+[TYPE_EXPENSE] pro mechanics,Vehicle,Food & Drinks
+[TYPE_EXPENSE] precision garage,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autocare express - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] precision garage - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] express car wash - jbeil,Vehicle,Food & Drinks
+[TYPE_EXPENSE] sparkle car wash,Vehicle,Food & Drinks
+[TYPE_EXPENSE] engine works - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autofix workshop - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] tire shop - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] brake shop - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] auto plus garage - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] michel auto garage - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autofix workshop - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] express car wash - jbeil,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autocare express - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] precision garage - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autofix workshop - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] michel auto garage - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] auto plus garage - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] tuneup center service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] michel auto garage - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] auto plus garage - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] tuneup center service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] harbour motors service - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autocare express - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] precision garage - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autofix workshop - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] main street auto service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] tuneup center service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] precision garage,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autocare lebanon,Vehicle,Food & Drinks
+[TYPE_EXPENSE] shine & go car wash - wash,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autofix center - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] speedy garage - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] engine works - repair,Vehicle,Food & Drinks
+[TYPE_EXPENSE] wheel alignment shop - service,Vehicle,Food & Drinks
+[TYPE_EXPENSE] autofix workshop - service,Vehicle,Food & Drinks

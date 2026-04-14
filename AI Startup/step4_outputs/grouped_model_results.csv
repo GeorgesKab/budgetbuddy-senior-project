@@ -1,0 +1,3 @@
+model,accuracy,macro_f1
+LinearSVC text_plus_type,0.9583,0.9575
+Dummy Most Frequent,0.2975,0.0353

@@ -1,0 +1,14 @@
+,Entertainment,Food & Drinks,Fuel,Gifts,Health,Other Expenses,Other Income,Rent,Salary,Shopping,Sports,Transport,Vehicle
+Entertainment,65,5,0,0,0,0,0,0,0,0,0,0,0
+Food & Drinks,0,279,0,0,0,0,0,0,0,0,0,0,0
+Fuel,0,2,78,0,0,0,0,0,0,0,0,0,0
+Gifts,0,7,0,63,0,0,0,0,0,0,0,0,0
+Health,0,2,0,0,59,0,0,0,0,0,0,0,0
+Other Expenses,0,7,0,0,0,39,0,0,0,0,0,0,0
+Other Income,0,1,0,0,0,0,54,0,0,0,0,0,0
+Rent,0,0,0,0,0,0,0,33,0,0,0,0,0
+Salary,0,1,0,0,0,0,0,0,29,0,1,0,0
+Shopping,0,10,0,0,0,0,0,0,0,98,0,0,1
+Sports,0,6,0,0,0,0,0,0,0,0,14,0,0
+Transport,1,2,0,0,0,0,0,0,0,0,0,65,0
+Vehicle,0,3,0,0,0,0,0,0,0,0,0,0,74

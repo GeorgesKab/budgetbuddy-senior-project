@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { format, subDays } from "date-fns";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
-import { useMemo, useState, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { BalanceTrendChart } from "@/components/balance-trend-chart";
 import { TopExpensesChart } from "@/components/top-expenses-chart";
@@ -78,41 +78,79 @@ function ExpenseBreakdownWidget({ transactions }: { transactions: Transaction[] 
   );
 }
 
-function RecentTransactionsWidget({ transactions, categories }: { transactions: Transaction[]; categories: Category[] }) {
+function RecentTransactionsWidget({
+  transactions,
+  categories,
+}: {
+  transactions: Transaction[];
+  categories: Category[];
+}) {
   const iconMap = useMemo(() => {
     const map: Record<string, string> = {};
-    categories.forEach(c => { map[c.name.toLowerCase()] = c.icon; });
+    categories.forEach((c) => {
+      map[c.name.toLowerCase()] = c.icon;
+    });
     return map;
   }, [categories]);
 
+  const recentTransactions = useMemo(() => {
+    return [...transactions]
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 7);
+  }, [transactions]);
+
   return (
     <Card className="h-full">
-      <CardHeader><CardTitle>Recent Transactions</CardTitle></CardHeader>
+      <CardHeader>
+        <CardTitle>Recent Transactions</CardTitle>
+      </CardHeader>
+
       <CardContent>
         <div className="divide-y divide-border">
-          {transactions.slice(0, 7).map(t => {
+          {recentTransactions.map((t) => {
             const iconName = iconMap[t.category.toLowerCase()] || "circle";
             const IconComp = getIconComponent(iconName);
+
             return (
-              <div key={t.id} className="flex items-center gap-3 py-3 hover:bg-muted/30 transition-colors px-1">
+              <div
+                key={t.id}
+                className="flex items-center gap-3 py-3 hover:bg-muted/30 transition-colors px-1"
+              >
                 <IconComp className="h-5 w-5 text-muted-foreground flex-shrink-0" />
                 <div className="flex flex-col flex-1 min-w-0">
-                  <span className="font-medium text-foreground truncate">{t.description}</span>
-                  <span className="text-xs text-muted-foreground">{format(new Date(t.date), "MMM d, yyyy")} • {t.category}</span>
+                  <span className="font-medium text-foreground truncate">
+                    {t.description}
+                  </span>
+                  <span className="text-xs text-muted-foreground">
+                    {format(new Date(t.date), "MMM d, yyyy")} • {t.category}
+                  </span>
                 </div>
-                <span className={`font-semibold whitespace-nowrap ${t.type === "income" ? "text-emerald-600" : "text-destructive"}`}>
+                <span
+                  className={`font-semibold whitespace-nowrap ${
+                    t.type === "income" ? "text-emerald-600" : "text-destructive"
+                  }`}
+                >
                   {t.type === "income" ? "+" : "-"}${Number(t.amount).toFixed(2)}
                 </span>
               </div>
             );
           })}
-          {transactions.length === 0 && (
-            <p className="text-center text-muted-foreground py-8">No transactions yet.</p>
+
+          {recentTransactions.length === 0 && (
+            <p className="text-center text-muted-foreground py-8">
+              No transactions yet.
+            </p>
           )}
         </div>
+
         {transactions.length > 7 && (
           <div className="mt-4 text-center">
-            <Link href="/transactions" className="text-sm text-primary hover:underline font-medium">View all transactions</Link>
+            <Link
+              href="/transactions"
+              className="text-sm text-primary hover:underline font-medium"
+            >
+              View all transactions
+            </Link>
           </div>
         )}
       </CardContent>
@@ -136,44 +174,50 @@ export default function Dashboard() {
   const [customFrom, setCustomFrom] = useState(() => format(subDays(new Date(), 30), "yyyy-MM-dd"));
   const [customTo, setCustomTo] = useState(() => format(new Date(), "yyyy-MM-dd"));
 
-  const { startDate, endDate } = useMemo(() => {
-    if (dateRange === "all") {
-      return { startDate: new Date(0), endDate: new Date() };
-    }
-    if (dateRange === "custom") {
-      return {
-        startDate: new Date(customFrom + "T00:00:00"),
-        endDate: new Date(customTo + "T23:59:59"),
-      };
-    }
-    const days = parseInt(dateRange);
-    return {
-      startDate: subDays(new Date(), days),
-      endDate: new Date(),
-    };
-  }, [dateRange, customFrom, customTo]);
+  let startDate: Date;
+let endDate: Date;
+
+if (dateRange === "all") {
+  startDate = new Date(0);
+  endDate = new Date();
+} else if (dateRange === "custom") {
+  startDate = new Date(customFrom + "T00:00:00");
+  endDate = new Date(customTo + "T23:59:59");
+} else {
+  const days = parseInt(dateRange);
+  endDate = new Date();
+  startDate = subDays(endDate, days);
+}
+
 
   const filteredTransactions = useMemo(() => {
-    if (!transactions) return [];
-    if (dateRange === "all") return transactions;
-    return transactions.filter(t => {
-      const d = new Date(t.date);
-      return d >= startDate && d <= endDate;
-    });
-  }, [transactions, startDate, endDate, dateRange]);
+  if (!transactions) return [];
+  if (dateRange === "all") return transactions;
 
-  const allTimeStats = useMemo(() => {
-    if (!transactions) return { income: 0, expense: 0, total: 0 };
-    return transactions.reduce(
-      (acc, t) => {
-        const amount = Number(t.amount);
-        if (t.type === "income") { acc.income += amount; acc.total += amount; }
-        else { acc.expense += amount; acc.total -= amount; }
-        return acc;
-      },
-      { income: 0, expense: 0, total: 0 }
-    );
-  }, [transactions]);
+  return transactions.filter((t) => {
+    const d = new Date(t.date);
+    return d >= startDate && d <= endDate;
+  });
+}, [transactions, startDate, endDate, dateRange]);
+
+ const allTimeStats = useMemo(() => {
+  if (!transactions) return { income: 0, expense: 0, total: 0 };
+
+  return transactions.reduce(
+    (acc, t) => {
+      const amount = Number(t.amount);
+      if (t.type === "income") {
+        acc.income += amount;
+        acc.total += amount;
+      } else {
+        acc.expense += amount;
+        acc.total -= amount;
+      }
+      return acc;
+    },
+    { income: 0, expense: 0, total: 0 }
+  );
+}, [transactions]);
 
   const rangeStats = useMemo(() => {
     return filteredTransactions.reduce(
@@ -223,7 +267,14 @@ export default function Dashboard() {
   const renderWidgetContent = (id: WidgetId) => {
     if (!transactions) return null;
     switch (id) {
-      case "balanceTrend":       return <BalanceTrendChart transactions={filteredTransactions} allTransactions={transactions} startDate={startDate} />;
+case "balanceTrend":
+  return (
+    <BalanceTrendChart
+      transactions={filteredTransactions}
+      allTransactions={transactions}
+      startDate={startDate}
+    />
+  );  
       case "recentTransactions": return <RecentTransactionsWidget transactions={filteredTransactions} categories={allCategories} />;
       case "expenseBreakdown":   return <ExpenseBreakdownWidget transactions={filteredTransactions} />;
       case "topExpenses":        return <TopExpensesChart transactions={filteredTransactions} />;
@@ -281,6 +332,7 @@ export default function Dashboard() {
     }
     return result;
   };
+
 
   return (
     <div className="space-y-8">

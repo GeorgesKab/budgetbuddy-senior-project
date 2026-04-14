@@ -1,0 +1,26 @@
+{
+  "approved": true,
+  "current_eval": {
+    "accuracy": 0.9223,
+    "macro_f1": 0.914,
+    "train_rows": 4006,
+    "test_rows": 1017,
+    "unique_groups": 2357
+  },
+  "candidate_eval": {
+    "accuracy": 0.9702,
+    "macro_f1": 0.9658,
+    "train_rows": 4028,
+    "test_rows": 974,
+    "unique_groups": 2337
+  },
+  "required_macro_f1": 0.904,
+  "required_accuracy": 0.9123,
+  "reasons": [],
+  "feedback_rows_added": 7,
+  "candidate_model_path": "C:\\Users\\User\\Desktop\\budgetbuddy-senior-project\\AI Startup\\step7_outputs\\candidate_model\\budgetbuddy_autocat_pipeline_candidate.joblib",
+  "candidate_meta_path": "C:\\Users\\User\\Desktop\\budgetbuddy-senior-project\\AI Startup\\step7_outputs\\candidate_model\\budgetbuddy_autocat_metadata_candidate.json",
+  "production_model_path": "C:\\Users\\User\\Desktop\\budgetbuddy-senior-project\\AI Startup\\step5_model_artifacts\\budgetbuddy_autocat_pipeline.joblib",
+  "production_meta_path": "C:\\Users\\User\\Desktop\\budgetbuddy-senior-project\\AI Startup\\step5_model_artifacts\\budgetbuddy_autocat_metadata.json",
+  "generated_at": "2026-04-14T12:32:36.533926+00:00"
+}

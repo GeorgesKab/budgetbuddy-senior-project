@@ -1,0 +1,9 @@
+text_used_by_model,predicted_category
+[TYPE_EXPENSE] uber,Transport
+[TYPE_EXPENSE] zara,Shopping
+[TYPE_EXPENSE] mcdo,Food & Drinks
+[TYPE_EXPENSE] medco,Fuel
+[TYPE_INCOME] payroll,Salary
+[TYPE_EXPENSE] monthly rent,Rent
+[TYPE_EXPENSE] pharmacy,Health
+[TYPE_EXPENSE] decathlon shoes,Sports

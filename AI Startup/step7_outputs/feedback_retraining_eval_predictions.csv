@@ -1,0 +1,975 @@
+text_used_by_model,actual_category,predicted_category
+[TYPE_EXPENSE] escape room at codex discounted by jerome,Entertainment,Entertainment
+[TYPE_EXPENSE] bad boys vox cinema popcorn caramel,Entertainment,Entertainment
+[TYPE_EXPENSE] laser tag battlefield,Entertainment,Food & Drinks
+[TYPE_EXPENSE] kairos armenia trip,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] theater,Entertainment,Entertainment
+[TYPE_EXPENSE] byblos casino night,Entertainment,Entertainment
+[TYPE_EXPENSE] live concert ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] byblos festival ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] outdoor concert,Entertainment,Entertainment
+[TYPE_EXPENSE] streaming service - annual,Entertainment,Entertainment
+[TYPE_EXPENSE] classical concert,Entertainment,Entertainment
+[TYPE_EXPENSE] comedy club night,Entertainment,Entertainment
+[TYPE_EXPENSE] byblos festival - ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] theater play - ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] theatre gala,Entertainment,Entertainment
+[TYPE_EXPENSE] cultural festival - entry,Entertainment,Entertainment
+[TYPE_EXPENSE] cinema city - premium,Entertainment,Entertainment
+[TYPE_EXPENSE] theater play - ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] cinema city - premium,Entertainment,Entertainment
+[TYPE_EXPENSE] theater play - ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] cultural festival - entry,Entertainment,Entertainment
+[TYPE_EXPENSE] byblos festival - ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] cinema city - premium,Entertainment,Entertainment
+[TYPE_EXPENSE] live music venue,Entertainment,Entertainment
+[TYPE_EXPENSE] classical concert hall,Entertainment,Entertainment
+[TYPE_EXPENSE] byblos festival - ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] cinema city - screening,Entertainment,Entertainment
+[TYPE_EXPENSE] live music venue - ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] live concert ticket - venue,Entertainment,Entertainment
+[TYPE_EXPENSE] museum of beirut entry,Entertainment,Entertainment
+[TYPE_EXPENSE] comedy club night,Entertainment,Entertainment
+[TYPE_EXPENSE] live concert ticket - venue,Entertainment,Entertainment
+[TYPE_EXPENSE] museum of beirut entry,Entertainment,Entertainment
+[TYPE_EXPENSE] comedy club night,Entertainment,Entertainment
+[TYPE_EXPENSE] opera house - event,Entertainment,Entertainment
+[TYPE_EXPENSE] comedy club night - entry,Entertainment,Entertainment
+[TYPE_EXPENSE] cultural festival - entry,Entertainment,Entertainment
+[TYPE_EXPENSE] classical concert hall,Entertainment,Entertainment
+[TYPE_EXPENSE] hamra live stage,Entertainment,Entertainment
+[TYPE_EXPENSE] summer festival ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] classical concert,Entertainment,Entertainment
+[TYPE_EXPENSE] hamra live event,Entertainment,Entertainment
+[TYPE_EXPENSE] byblos vip ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] live theater ticket,Entertainment,Entertainment
+[TYPE_EXPENSE] comedy night entry,Entertainment,Entertainment
+[TYPE_EXPENSE] outdoor concert,Entertainment,Entertainment
+[TYPE_EXPENSE] streaming plan,Entertainment,Entertainment
+[TYPE_EXPENSE] jazz night venue - entry,Entertainment,Entertainment
+[TYPE_EXPENSE] comedy club night - entry,Entertainment,Entertainment
+[TYPE_EXPENSE] cultural festival - entry,Entertainment,Entertainment
+[TYPE_EXPENSE] draft beer at quadrangle,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] caramel frappe mcdo,Food & Drinks,Food & Drinks
+[TYPE_INCOME] saniour restaurant back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cafe younes,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cafe younes,Food & Drinks,Food & Drinks
+[TYPE_INCOME] stories coffee shop back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] dunkin donuts with tania,Food & Drinks,Food & Drinks
+[TYPE_INCOME] mccafe back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] mccafe back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] latte art,Food & Drinks,Entertainment
+[TYPE_EXPENSE] lunch uni frisbee tournament,Food & Drinks,Food & Drinks
+[TYPE_INCOME] kahuna cocktails dimi back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] lollipop,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] shopping breakfast,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cotton candy gelo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mango shake 1 900 100 tips,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] tavern restaurant all,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] water pringles visite,Food & Drinks,Food & Drinks
+[TYPE_INCOME] rim water back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] cake back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cake,Food & Drinks,Food & Drinks
+[TYPE_INCOME] spinneys bach back,Shopping,Shopping
+[TYPE_INCOME] spinneys,Shopping,Shopping
+[TYPE_EXPENSE] spinneys,Shopping,Shopping
+[TYPE_INCOME] be fresh cocktail back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bechara bros cheese mankouche,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pepsi pringles codex,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chips gum,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] gelato show,Food & Drinks,Entertainment
+[TYPE_EXPENSE] gelato show,Food & Drinks,Entertainment
+[TYPE_EXPENSE] mcflury twix,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo fries,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sandwiches,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] kabbouji s birthday food,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] promarche safar,Food & Drinks,Food & Drinks
+[TYPE_INCOME] snacks grab n go,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] snacks grab n go,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] dark blue sitos,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] clorets,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arnabeet,Food & Drinks,Food & Drinks
+[TYPE_INCOME] potato sandwich ndu back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] potato sandwich ndu back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] sandwish potato ndu back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] malak al tawouk dan hrant yorgo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] t-marboota,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arrouk,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] depart roy,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] depart roy,Food & Drinks,Food & Drinks
+[TYPE_INCOME] si bon knefe back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cruise lunch all,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bk sandwich w noss,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bk sandwich w noss,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sud gaby bday,Food & Drinks,Food & Drinks
+[TYPE_INCOME] ekht mankouche mf back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] beit halab with abf,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arnabeet,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy abf,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy abf,Food & Drinks,Food & Drinks
+[TYPE_INCOME] roxy back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy arnabeet,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] saniour,Food & Drinks,Food & Drinks
+[TYPE_INCOME] ld bread back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] upper room,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cheese on top parking,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] shams ammiq,Food & Drinks,Other Expenses
+[TYPE_INCOME] sud restobar back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sandwich & 1/2,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] tender bar with tony back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] wooden bakery,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcflurry mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcflurry mcdo,Food & Drinks,Food & Drinks
+[TYPE_INCOME] sunday mcdo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] sunday mcdo,Food & Drinks,Food & Drinks
+[TYPE_INCOME] falafel mcdo back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] roxy back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mano,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] roxy back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_INCOME] bk back,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] crepaway alex,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] lina s with angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roadster with angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] upper roof,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bartartine with angg 1st date,Food & Drinks,Food & Drinks
+[TYPE_INCOME] malak change,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pork burger,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mcdo oreo,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bechara bros,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roxy,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mccafé couz,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] saniour,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] upper room,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] ghazar,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roadster with angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roadster with angg,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cafe younes,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cafe yammouni,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul - bakery,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] manousheh house - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul bakery - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bakery - local,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou elie,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al halabi - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al halabi - branch 2,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - branch 2,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] babel - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez zakhia,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] manousheh house - branch 2,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] t marbouta - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mankoushe express,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pita corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & lemon,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al fawanees - beirut,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café hamra - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harissa grill - restaurant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the lebanese spoon - diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & lemon - bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] roadster diner - corniche,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al halabi - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] manousheh house - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café des arts - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive garden café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cedar & spice,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baker s corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou tarek,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] babel - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez zakhia - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc - brunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] snack corner - kiosk,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al baba - sweets kiosk,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bread & co - morning,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul - bakery,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] barbar - quick bite,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan - seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul - bakery verdun,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] barbar - quick bite,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside café - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & lemon - bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] barbar - quick bite,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harissa grill - restaurant,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the lebanese spoon - diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou elie,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mini manakish - stall,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bread & co - morning,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive garden café,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - jounieh,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] fouad s kitchen - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] barbar - snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul bakery - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] tawlet - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café yara,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] beirut bites,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pigeon house snacks,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] green spoon,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baker s corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the olive room - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al mandaloun - jounieh,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] fouad s kitchen - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] barbar - snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] zaatar w zeit - lunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] paul bakery - coffee,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] centrale - branch meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] beirut bites,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside diner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pigeon house snacks,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] green spoon,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baker s corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the olive room - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café yara,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] beirut bites - branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] maison du pain - pastries,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] the green table - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill bistro - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & lemon - bistro,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café mar mikhael,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pita corner kiosk,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] corner café branch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] seaside café meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bistro by the bay,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] morning grind,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & lemon,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] baker s corner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] cedar & spice,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou tarek,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] abou youssef grill,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez zakhia,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] quick bites snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café mosaic - hamra,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] olive & fig bistro - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] street falafel stand - snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] marina sunset grill - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] pita corner kiosk - snack,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] harbour grill dinner - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al fawanees - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al falamanki - meal,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] babel - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] bread & co - morning,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] chez zakhia - dinner,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café du parc - brunch,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] snack corner - kiosk,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] al sultan brahim - seafood,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] café sawa,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] mini bites,Food & Drinks,Food & Drinks
+[TYPE_EXPENSE] not into consideration crisis medco kfardebian nassab,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_INCOME] pionnieres fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_INCOME] fuel,Fuel,Fuel
+[TYPE_INCOME] fuel back,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_INCOME] back fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuel station - jounieh,Fuel,Fuel
+[TYPE_EXPENSE] total station - jounieh,Fuel,Fuel
+[TYPE_EXPENSE] petrolina,Fuel,Fuel
+[TYPE_EXPENSE] shell - station,Fuel,Fuel
+[TYPE_EXPENSE] petrol station - local,Fuel,Fuel
+[TYPE_EXPENSE] shell - local,Fuel,Fuel
+[TYPE_EXPENSE] alfa fuel station,Fuel,Fuel
+[TYPE_EXPENSE] dora fuel station,Fuel,Fuel
+[TYPE_EXPENSE] shell - main,Fuel,Fuel
+[TYPE_EXPENSE] petrol station - north,Fuel,Fuel
+[TYPE_EXPENSE] express petrol,Fuel,Fuel
+[TYPE_EXPENSE] express petrol - station,Fuel,Fuel
+[TYPE_EXPENSE] north fuel station - pump,Fuel,Fuel
+[TYPE_EXPENSE] fuelhub - station,Fuel,Fuel
+[TYPE_EXPENSE] total station - jounieh,Fuel,Fuel
+[TYPE_EXPENSE] shell - main station,Fuel,Fuel
+[TYPE_EXPENSE] alfa fuel - station,Fuel,Fuel
+[TYPE_EXPENSE] prime petrol - station,Fuel,Fuel
+[TYPE_EXPENSE] cityfuel - dora,Fuel,Fuel
+[TYPE_EXPENSE] fuelhub - station,Fuel,Fuel
+[TYPE_EXPENSE] prime petrol - pump,Fuel,Fuel
+[TYPE_EXPENSE] express petrol - station,Fuel,Fuel
+[TYPE_EXPENSE] north fuel station - pump,Fuel,Fuel
+[TYPE_EXPENSE] petrolina,Fuel,Fuel
+[TYPE_EXPENSE] shell - station,Fuel,Fuel
+[TYPE_EXPENSE] fuelhub station,Fuel,Fuel
+[TYPE_EXPENSE] shell - station,Fuel,Fuel
+[TYPE_EXPENSE] fuelhub station,Fuel,Fuel
+[TYPE_EXPENSE] north fuel station - pump,Fuel,Fuel
+[TYPE_EXPENSE] city pump - fuel,Fuel,Fuel
+[TYPE_EXPENSE] fuelhub - station,Fuel,Fuel
+[TYPE_EXPENSE] prime petrol - pump,Fuel,Fuel
+[TYPE_EXPENSE] dora fuel station,Fuel,Fuel
+[TYPE_EXPENSE] dora fuel stop,Fuel,Fuel
+[TYPE_EXPENSE] express petrol,Fuel,Fuel
+[TYPE_EXPENSE] fuelmax,Fuel,Fuel
+[TYPE_EXPENSE] dora fuel station,Fuel,Fuel
+[TYPE_EXPENSE] north fuel pump - fill,Fuel,Fuel
+[TYPE_EXPENSE] alfa fuel - station,Fuel,Fuel
+[TYPE_EXPENSE] shell main - fill,Fuel,Fuel
+[TYPE_EXPENSE] dora fuel pump - fill,Fuel,Fuel
+[TYPE_EXPENSE] prime petrol - pump,Fuel,Fuel
+[TYPE_EXPENSE] cityfuel station,Fuel,Fuel
+[TYPE_EXPENSE] greenfuel station - fill,Fuel,Fuel
+[TYPE_EXPENSE] jackaroo hog gifts,Gifts,Gifts
+[TYPE_EXPENSE] christmas mom pt 1,Gifts,Gifts
+[TYPE_INCOME] kk sek 24-25 back,Gifts,Gifts
+[TYPE_INCOME] alex back gift,Gifts,Gifts
+[TYPE_EXPENSE] souk gift shop - downtown,Gifts,Gifts
+[TYPE_EXPENSE] souk gift shop - downtown,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] chocolate boutique,Gifts,Gifts
+[TYPE_EXPENSE] beirut crafts,Gifts,Gifts
+[TYPE_EXPENSE] local souvenir shop,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts co,Gifts,Gifts
+[TYPE_EXPENSE] boutique treasures,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] chocolate boutique - purchase,Gifts,Gifts
+[TYPE_EXPENSE] paper & trinkets,Gifts,Gifts
+[TYPE_EXPENSE] art & gift studio,Gifts,Gifts
+[TYPE_EXPENSE] craft market - stall,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] small gifts - purchase,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] beirut crafts - handicraft,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs,Gifts,Gifts
+[TYPE_EXPENSE] beirut crafts,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts co,Gifts,Gifts
+[TYPE_EXPENSE] boutique treasures,Gifts,Gifts
+[TYPE_EXPENSE] chocolate boutique,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] beirut crafts - handicraft,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Gifts
+[TYPE_EXPENSE] maison du cadeau - item,Gifts,Gifts
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Gifts
+[TYPE_EXPENSE] artisan alley,Gifts,Gifts
+[TYPE_EXPENSE] bloom florist,Gifts,Gifts
+[TYPE_EXPENSE] art & gift studio,Gifts,Gifts
+[TYPE_EXPENSE] maison des fleurs - bouquet,Gifts,Gifts
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Gifts
+[TYPE_EXPENSE] maison du cadeau - item,Gifts,Gifts
+[TYPE_EXPENSE] maison du cadeau - gift,Gifts,Gifts
+[TYPE_EXPENSE] artisan alley,Gifts,Gifts
+[TYPE_EXPENSE] bloom florist,Gifts,Gifts
+[TYPE_EXPENSE] art & gift studio,Gifts,Gifts
+[TYPE_EXPENSE] artisan alley - gift,Gifts,Gifts
+[TYPE_EXPENSE] little things boutique - buy,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts co - purchase,Gifts,Gifts
+[TYPE_EXPENSE] olive wood gifts,Gifts,Gifts
+[TYPE_EXPENSE] handmade lane,Gifts,Gifts
+[TYPE_EXPENSE] artisan gifts,Gifts,Gifts
+[TYPE_EXPENSE] makers market,Gifts,Gifts
+[TYPE_EXPENSE] boutique treasures,Gifts,Gifts
+[TYPE_EXPENSE] art & gift studio,Gifts,Gifts
+[TYPE_EXPENSE] boutique treasures,Gifts,Gifts
+[TYPE_EXPENSE] olive wood crafts - gift,Gifts,Gifts
+[TYPE_EXPENSE] panadol,Health,Food & Drinks
+[TYPE_EXPENSE] panadol,Health,Food & Drinks
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] medical supplies,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] clinic - hamra,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] clinic visit,Health,Health
+[TYPE_EXPENSE] pharmacy,Health,Health
+[TYPE_EXPENSE] clinic - hamra,Health,Health
+[TYPE_EXPENSE] al rihab pharmacy,Health,Health
+[TYPE_EXPENSE] rafik hariri university hospital,Health,Health
+[TYPE_EXPENSE] dental clinic,Health,Health
+[TYPE_EXPENSE] rafik clinic,Health,Health
+[TYPE_EXPENSE] prime clinic,Health,Health
+[TYPE_EXPENSE] specialist orthopedics - clinic,Health,Health
+[TYPE_EXPENSE] careplus pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] diagnostic center - test,Health,Health
+[TYPE_EXPENSE] hôtel-dieu de france - clinic,Health,Health
+[TYPE_EXPENSE] specialist clinic - consultation,Health,Health
+[TYPE_EXPENSE] wellness diagnostics,Health,Health
+[TYPE_EXPENSE] pharmacy central - purchase,Health,Health
+[TYPE_EXPENSE] clemenceau clinic - visit,Health,Health
+[TYPE_EXPENSE] rafik clinic - test,Health,Health
+[TYPE_EXPENSE] aubmc outpatient - visit,Health,Health
+[TYPE_EXPENSE] aubmc outpatient - visit,Health,Health
+[TYPE_EXPENSE] prime clinic - consultation,Health,Health
+[TYPE_EXPENSE] careplus pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] diagnostic center - test,Health,Health
+[TYPE_EXPENSE] rafik hariri university hospital,Health,Health
+[TYPE_EXPENSE] prime clinic,Health,Health
+[TYPE_EXPENSE] prime clinic - consultation,Health,Health
+[TYPE_EXPENSE] hôtel-dieu de france - clinic,Health,Health
+[TYPE_EXPENSE] al rihab pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] aubmc clinic - consultation,Health,Health
+[TYPE_EXPENSE] careplus pharmacy purchase,Health,Health
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Health
+[TYPE_EXPENSE] hôtel-dieu de france - clinic,Health,Health
+[TYPE_EXPENSE] al rihab pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] aubmc clinic - consultation,Health,Health
+[TYPE_EXPENSE] careplus pharmacy purchase,Health,Health
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Health
+[TYPE_EXPENSE] wellness pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] careplus pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] diagnostic center - test,Health,Health
+[TYPE_EXPENSE] careplus pharmacy purchase,Health,Health
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Health
+[TYPE_EXPENSE] prime clinic,Health,Health
+[TYPE_EXPENSE] rafik clinic,Health,Health
+[TYPE_EXPENSE] specialist consultation,Health,Health
+[TYPE_EXPENSE] healthpoint clinic visit,Health,Health
+[TYPE_EXPENSE] careplus pharmacy - purchase,Health,Health
+[TYPE_EXPENSE] specialist consultation - visit,Health,Health
+[TYPE_EXPENSE] pharmacy central - purchase,Health,Health
+[TYPE_EXPENSE] city diagnostics,Health,Transport
+[TYPE_EXPENSE] city diagnostics - test,Health,Health
+[TYPE_EXPENSE] dry cleaning twintip clothes,Other Expenses,Other Expenses
+[TYPE_EXPENSE] seto haircut 2 peter,Other Expenses,Other Expenses
+[TYPE_EXPENSE] barber,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] barber,Other Expenses,Food & Drinks
+[TYPE_INCOME] kabbouji s birthday brunch fee back,Other Expenses,Other Expenses
+[TYPE_EXPENSE] mira celebration cake,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] uco contribution,Other Expenses,Other Expenses
+[TYPE_EXPENSE] event hh contribution,Other Expenses,Other Expenses
+[TYPE_EXPENSE] nye expenses,Other Expenses,Food & Drinks
+[TYPE_EXPENSE] kairos me 26 - conference fees,Other Expenses,Other Expenses
+[TYPE_EXPENSE] atm fee,Other Expenses,Other Expenses
+[TYPE_EXPENSE] laundry - local,Other Expenses,Other Expenses
+[TYPE_EXPENSE] parking fee - garage,Other Expenses,Other Expenses
+[TYPE_EXPENSE] bank service fee,Other Expenses,Other Expenses
+[TYPE_EXPENSE] utility payment,Other Expenses,Other Expenses
+[TYPE_EXPENSE] laundry - local service,Other Expenses,Other Expenses
+[TYPE_EXPENSE] courier - express,Other Expenses,Other Expenses
+[TYPE_EXPENSE] bank service fee,Other Expenses,Other Expenses
+[TYPE_EXPENSE] parking fee - mall,Other Expenses,Other Expenses
+[TYPE_EXPENSE] utility payment,Other Expenses,Other Expenses
+[TYPE_EXPENSE] parking fee - mall,Other Expenses,Other Expenses
+[TYPE_EXPENSE] utility payment,Other Expenses,Other Expenses
+[TYPE_EXPENSE] metro laundry - service,Other Expenses,Other Expenses
+[TYPE_EXPENSE] mobile recharge,Other Expenses,Other Expenses
+[TYPE_EXPENSE] utility payment,Other Expenses,Other Expenses
+[TYPE_EXPENSE] parking lot fee,Other Expenses,Other Expenses
+[TYPE_INCOME] november allowance,Other Income,Other Income
+[TYPE_INCOME] july allowance,Other Income,Other Income
+[TYPE_INCOME] november allowance,Other Income,Other Income
+[TYPE_INCOME] mom bonus,Other Income,Other Income
+[TYPE_INCOME] khalto samia bonus,Other Income,Other Income
+[TYPE_INCOME] dad extra bonus,Other Income,Other Income
+[TYPE_INCOME] july allowance,Other Income,Other Income
+[TYPE_INCOME] scout bonus,Other Income,Fuel
+[TYPE_INCOME] scout income,Other Income,Other Income
+[TYPE_INCOME] camp hp cp jad back allowance,Other Income,Other Income
+[TYPE_INCOME] hh income allowance,Other Income,Other Income
+[TYPE_INCOME] bonus mom,Other Income,Other Income
+[TYPE_INCOME] mom bonus,Other Income,Other Income
+[TYPE_INCOME] mom advane payment,Other Income,Gifts
+[TYPE_INCOME] income monthly,Other Income,Other Income
+[TYPE_INCOME] cashback reward,Other Income,Other Income
+[TYPE_INCOME] cashback - card,Other Income,Other Income
+[TYPE_INCOME] refund - retail,Other Income,Other Income
+[TYPE_INCOME] vendor refund,Other Income,Other Income
+[TYPE_INCOME] service refund,Other Income,Other Income
+[TYPE_INCOME] refund - travel booking,Other Income,Other Income
+[TYPE_INCOME] cashback - card,Other Income,Other Income
+[TYPE_INCOME] service refund,Other Income,Other Income
+[TYPE_INCOME] vendor refund,Other Income,Other Income
+[TYPE_INCOME] vendor refund,Other Income,Other Income
+[TYPE_INCOME] vendor refund,Other Income,Other Income
+[TYPE_INCOME] retail refund,Other Income,Other Income
+[TYPE_INCOME] retail refund,Other Income,Other Income
+[TYPE_INCOME] vendor refund,Other Income,Other Income
+[TYPE_INCOME] service refund,Other Income,Other Income
+[TYPE_INCOME] service refund,Other Income,Other Income
+[TYPE_INCOME] retail refund,Other Income,Other Income
+[TYPE_INCOME] cashback reward,Other Income,Other Income
+[TYPE_INCOME] service refund,Other Income,Other Income
+[TYPE_INCOME] cashback reward,Other Income,Other Income
+[TYPE_INCOME] cashback reward,Other Income,Other Income
+[TYPE_EXPENSE] household january,Rent,Rent
+[TYPE_EXPENSE] twintip ski equipment,Rent,Salary
+[TYPE_EXPENSE] household january,Rent,Rent
+[TYPE_EXPENSE] household,Rent,Rent
+[TYPE_EXPENSE] household,Rent,Rent
+[TYPE_EXPENSE] apartment rent - march,Rent,Rent
+[TYPE_EXPENSE] apartment rent - september,Rent,Rent
+[TYPE_EXPENSE] monthly rent - february,Rent,Rent
+[TYPE_EXPENSE] apartment rent - september,Rent,Rent
+[TYPE_EXPENSE] monthly rent - january,Rent,Rent
+[TYPE_EXPENSE] monthly rent - february,Rent,Rent
+[TYPE_EXPENSE] apartment rent - march,Rent,Rent
+[TYPE_EXPENSE] apartment rent - september,Rent,Rent
+[TYPE_EXPENSE] apartment rent - september,Rent,Rent
+[TYPE_EXPENSE] monthly rent - dec,Rent,Rent
+[TYPE_INCOME] twintip ski,Salary,Salary
+[TYPE_INCOME] twintip ski,Salary,Salary
+[TYPE_INCOME] twintip ski,Salary,Salary
+[TYPE_INCOME] codex last,Salary,Salary
+[TYPE_INCOME] codex january,Salary,Salary
+[TYPE_INCOME] codex january,Salary,Salary
+[TYPE_INCOME] tips codex,Salary,Food & Drinks
+[TYPE_INCOME] tips codex,Salary,Food & Drinks
+[TYPE_INCOME] baby sitting wage,Salary,Other Income
+[TYPE_INCOME] mindflares 10 days,Salary,Salary
+[TYPE_INCOME] mindflares 9 days,Salary,Salary
+[TYPE_INCOME] wish money work,Salary,Other Income
+[TYPE_INCOME] mindflares 6 days,Salary,Salary
+[TYPE_INCOME] monthly salary,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] salary transfer,Salary,Salary
+[TYPE_INCOME] payroll - transfer,Salary,Salary
+[TYPE_INCOME] payroll - company b,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] salary - employer f,Salary,Salary
+[TYPE_INCOME] payroll - transfer,Salary,Salary
+[TYPE_INCOME] payroll - june,Salary,Salary
+[TYPE_INCOME] company payroll - deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] company payroll - deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] monthly salary,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] monthly salary,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] monthly salary,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] monthly salary,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] monthly salary,Salary,Salary
+[TYPE_INCOME] payroll deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_INCOME] monthly salary - deposit,Salary,Salary
+[TYPE_INCOME] payroll deposit - employer,Salary,Salary
+[TYPE_EXPENSE] zara,Shopping,Shopping
+[TYPE_EXPENSE] zara,Shopping,Shopping
+[TYPE_EXPENSE] laptop yoga 7 83jr0001us,Shopping,Food & Drinks
+[TYPE_EXPENSE] cover iphone 14,Shopping,Food & Drinks
+[TYPE_EXPENSE] car bt,Shopping,Vehicle
+[TYPE_EXPENSE] 4 notebooks,Shopping,Food & Drinks
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] spinneys,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] supermarket,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] spinneys,Shopping,Shopping
+[TYPE_EXPENSE] clothing store,Shopping,Shopping
+[TYPE_EXPENSE] h&m beirut,Shopping,Gifts
+[TYPE_EXPENSE] bou khalil - furniture,Shopping,Shopping
+[TYPE_EXPENSE] home center,Shopping,Shopping
+[TYPE_EXPENSE] designer boutique,Shopping,Gifts
+[TYPE_EXPENSE] home center lebanon,Shopping,Shopping
+[TYPE_EXPENSE] the little shop,Shopping,Shopping
+[TYPE_EXPENSE] fashion district,Shopping,Shopping
+[TYPE_EXPENSE] vintage finds - boutique,Shopping,Shopping
+[TYPE_EXPENSE] techpoint electronics - store,Shopping,Shopping
+[TYPE_EXPENSE] zara - beirut,Shopping,Shopping
+[TYPE_EXPENSE] home center - store,Shopping,Shopping
+[TYPE_EXPENSE] aïshti - outlet purchase,Shopping,Shopping
+[TYPE_EXPENSE] beirut fabrics,Shopping,Gifts
+[TYPE_EXPENSE] luxury interiors,Shopping,Shopping
+[TYPE_EXPENSE] decor & more,Shopping,Shopping
+[TYPE_EXPENSE] electroworld,Shopping,Shopping
+[TYPE_EXPENSE] galleria beirut - store,Shopping,Shopping
+[TYPE_EXPENSE] aïshti - fashion house,Shopping,Shopping
+[TYPE_EXPENSE] carrefour - verdun,Shopping,Shopping
+[TYPE_EXPENSE] aïshti - home collection,Shopping,Shopping
+[TYPE_EXPENSE] bou khalil - furniture,Shopping,Shopping
+[TYPE_EXPENSE] bou khalil - furniture,Shopping,Shopping
+[TYPE_EXPENSE] aïshti - fashion purchase,Shopping,Shopping
+[TYPE_EXPENSE] fashion district - outlet,Shopping,Shopping
+[TYPE_EXPENSE] carrefour - verdun,Shopping,Shopping
+[TYPE_EXPENSE] vintage finds - boutique,Shopping,Shopping
+[TYPE_EXPENSE] carrefour,Shopping,Shopping
+[TYPE_EXPENSE] bou khalil,Shopping,Shopping
+[TYPE_EXPENSE] spinneys,Shopping,Shopping
+[TYPE_EXPENSE] h&m beirut,Shopping,Gifts
+[TYPE_EXPENSE] home center,Shopping,Shopping
+[TYPE_EXPENSE] aïshti - fashion house,Shopping,Shopping
+[TYPE_EXPENSE] vintage finds - boutique,Shopping,Shopping
+[TYPE_EXPENSE] corner fashion - store,Shopping,Shopping
+[TYPE_EXPENSE] luxury interiors,Shopping,Shopping
+[TYPE_EXPENSE] galeries lafayette - store,Shopping,Shopping
+[TYPE_EXPENSE] aïshti gallery,Shopping,Shopping
+[TYPE_EXPENSE] bou khalil - furniture purchase,Shopping,Shopping
+[TYPE_EXPENSE] stationery shop - purchase,Shopping,Shopping
+[TYPE_EXPENSE] aub bookstore - books,Shopping,Shopping
+[TYPE_EXPENSE] aïshti - fashion purchase,Shopping,Shopping
+[TYPE_EXPENSE] spinneys - grocery run,Shopping,Shopping
+[TYPE_EXPENSE] market lane grocer,Shopping,Shopping
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Shopping
+[TYPE_EXPENSE] electroworld,Shopping,Shopping
+[TYPE_EXPENSE] galeries lafayette - store,Shopping,Shopping
+[TYPE_EXPENSE] aïshti gallery,Shopping,Shopping
+[TYPE_EXPENSE] bou khalil - furniture purchase,Shopping,Shopping
+[TYPE_EXPENSE] stationery shop - purchase,Shopping,Shopping
+[TYPE_EXPENSE] aïshti - fashion purchase,Shopping,Shopping
+[TYPE_EXPENSE] aub bookstore - books,Shopping,Shopping
+[TYPE_EXPENSE] spinneys - grocery run,Shopping,Shopping
+[TYPE_EXPENSE] market lane grocer,Shopping,Shopping
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Shopping
+[TYPE_EXPENSE] electroworld,Shopping,Shopping
+[TYPE_EXPENSE] atlas electronics - gadget,Shopping,Shopping
+[TYPE_EXPENSE] gourmet lane - purchase,Shopping,Shopping
+[TYPE_EXPENSE] green market produce - buy,Shopping,Shopping
+[TYPE_EXPENSE] market lane grocer,Shopping,Shopping
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Shopping
+[TYPE_EXPENSE] studio home furnishings,Shopping,Shopping
+[TYPE_EXPENSE] homestyle depot,Shopping,Shopping
+[TYPE_EXPENSE] techpoint store,Shopping,Shopping
+[TYPE_EXPENSE] market lane grocer,Shopping,Shopping
+[TYPE_EXPENSE] fashion district,Shopping,Shopping
+[TYPE_EXPENSE] electroworld,Shopping,Shopping
+[TYPE_EXPENSE] the little shop,Shopping,Shopping
+[TYPE_EXPENSE] luxury finds boutique,Shopping,Shopping
+[TYPE_EXPENSE] verdun home goods - purchase,Shopping,Shopping
+[TYPE_EXPENSE] homestyle store - purchase,Shopping,Shopping
+[TYPE_EXPENSE] green market produce - buy,Shopping,Shopping
+[TYPE_EXPENSE] fashion district store - buy,Shopping,Shopping
+[TYPE_EXPENSE] electra home - furniture,Shopping,Shopping
+[TYPE_EXPENSE] luxury finds - purchase,Shopping,Shopping
+[TYPE_EXPENSE] electronics corner,Shopping,Shopping
+[TYPE_EXPENSE] home center purchase,Shopping,Shopping
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] ping pong rebound,Sports,Sports
+[TYPE_EXPENSE] football bounce missing,Sports,Sports
+[TYPE_EXPENSE] football vclub,Sports,Sports
+[TYPE_EXPENSE] ski sticks forgotten at home rental mike sport,Sports,Sports
+[TYPE_EXPENSE] padel angg david gelo,Sports,Sports
+[TYPE_INCOME] padel angg david gelo back,Sports,Sports
+[TYPE_INCOME] frisbee,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] padel country lodge,Sports,Sports
+[TYPE_INCOME] padel back,Sports,Sports
+[TYPE_EXPENSE] frisbee,Sports,Sports
+[TYPE_EXPENSE] pingpong rebound,Sports,Sports
+[TYPE_EXPENSE] football,Sports,Sports
+[TYPE_EXPENSE] marina fitness club,Sports,Sports
+[TYPE_EXPENSE] fitness first - membership,Sports,Sports
+[TYPE_EXPENSE] marina fitness club,Sports,Sports
+[TYPE_EXPENSE] beirut gym membership,Sports,Sports
+[TYPE_EXPENSE] parking aubmc,Transport,Vehicle
+[TYPE_EXPENSE] intercity bus,Transport,Transport
+[TYPE_EXPENSE] airport shuttle,Transport,Transport
+[TYPE_EXPENSE] night taxi,Transport,Transport
+[TYPE_EXPENSE] local bus - route 5,Transport,Transport
+[TYPE_EXPENSE] taxi - day shift,Transport,Transport
+[TYPE_EXPENSE] taxi service - day,Transport,Transport
+[TYPE_EXPENSE] local bus - route,Transport,Transport
+[TYPE_EXPENSE] city shuttle - line 2,Transport,Transport
+[TYPE_EXPENSE] local shuttle,Transport,Transport
+[TYPE_EXPENSE] beirut taxi co - ride,Transport,Transport
+[TYPE_EXPENSE] shared van - route,Transport,Transport
+[TYPE_EXPENSE] airport taxi - fare,Transport,Transport
+[TYPE_EXPENSE] city shuttle - fare,Transport,Transport
+[TYPE_EXPENSE] local bus - route 7,Transport,Transport
+[TYPE_EXPENSE] regional coach - ticket,Transport,Transport
+[TYPE_EXPENSE] careem - ride,Transport,Transport
+[TYPE_EXPENSE] careem - short ride,Transport,Transport
+[TYPE_EXPENSE] taxi - daytime,Transport,Transport
+[TYPE_EXPENSE] careem - short ride,Transport,Transport
+[TYPE_EXPENSE] taxi service - day,Transport,Transport
+[TYPE_EXPENSE] regional coach - ticket,Transport,Transport
+[TYPE_EXPENSE] airport shuttle,Transport,Transport
+[TYPE_EXPENSE] coach lines - regional,Transport,Transport
+[TYPE_EXPENSE] regional coach - ticket,Transport,Transport
+[TYPE_EXPENSE] cityride taxi,Transport,Transport
+[TYPE_EXPENSE] airport shuttle,Transport,Transport
+[TYPE_EXPENSE] local shuttle,Transport,Transport
+[TYPE_EXPENSE] intercity bus,Transport,Transport
+[TYPE_EXPENSE] night taxi,Transport,Transport
+[TYPE_EXPENSE] shared minibus line - fare,Transport,Transport
+[TYPE_EXPENSE] intercity coach ticket - fare,Transport,Transport
+[TYPE_EXPENSE] beirut taxi co - ride,Transport,Transport
+[TYPE_EXPENSE] shared van - route,Transport,Transport
+[TYPE_EXPENSE] airport taxi - fare,Transport,Transport
+[TYPE_EXPENSE] city shuttle - fare,Transport,Transport
+[TYPE_EXPENSE] local bus - route 7,Transport,Transport
+[TYPE_EXPENSE] regional coach - ticket,Transport,Transport
+[TYPE_EXPENSE] airport shuttle booking,Transport,Transport
+[TYPE_EXPENSE] service bus,Transport,Transport
+[TYPE_INCOME] car wash change back,Vehicle,Vehicle
+[TYPE_EXPENSE] car whashing,Vehicle,Vehicle
+[TYPE_INCOME] car_wash back money,Vehicle,Vehicle
+[TYPE_INCOME] ski parking back,Vehicle,Vehicle
+[TYPE_EXPENSE] bcc parking,Vehicle,Vehicle
+[TYPE_EXPENSE] bcc parking,Vehicle,Vehicle
+[TYPE_EXPENSE] tires inflate,Vehicle,Food & Drinks
+[TYPE_EXPENSE] oil filter change,Vehicle,Vehicle
+[TYPE_EXPENSE] wheel fixing,Vehicle,Vehicle
+[TYPE_EXPENSE] wheel fixing,Vehicle,Vehicle
+[TYPE_EXPENSE] michel auto garage,Vehicle,Vehicle
+[TYPE_EXPENSE] speedy garage,Vehicle,Vehicle
+[TYPE_EXPENSE] engine works,Vehicle,Vehicle
+[TYPE_EXPENSE] shine auto wash,Vehicle,Vehicle
+[TYPE_EXPENSE] autocare express,Vehicle,Vehicle
+[TYPE_EXPENSE] autofix workshop,Vehicle,Vehicle
+[TYPE_EXPENSE] tuneup center - service,Vehicle,Vehicle
+[TYPE_EXPENSE] michel auto - repair,Vehicle,Vehicle
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Vehicle
+[TYPE_EXPENSE] michel auto garage - service,Vehicle,Vehicle
+[TYPE_EXPENSE] garage service center - tune-up,Vehicle,Vehicle
+[TYPE_EXPENSE] tuneup center - service,Vehicle,Vehicle
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Vehicle
+[TYPE_EXPENSE] tuneup center - service,Vehicle,Vehicle
+[TYPE_EXPENSE] khodr auto repair,Vehicle,Vehicle
+[TYPE_EXPENSE] michel auto garage,Vehicle,Vehicle
+[TYPE_EXPENSE] autofix workshop,Vehicle,Vehicle
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Vehicle
+[TYPE_EXPENSE] express car wash - corniche,Vehicle,Vehicle
+[TYPE_EXPENSE] michel auto garage - service,Vehicle,Vehicle
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Vehicle
+[TYPE_EXPENSE] auto plus garage - maintenance,Vehicle,Vehicle
+[TYPE_EXPENSE] autocare express repair,Vehicle,Vehicle
+[TYPE_EXPENSE] precision garage service,Vehicle,Vehicle
+[TYPE_EXPENSE] autofix center - repair,Vehicle,Vehicle
+[TYPE_EXPENSE] express car wash - corniche,Vehicle,Vehicle
+[TYPE_EXPENSE] michel auto garage - service,Vehicle,Vehicle
+[TYPE_EXPENSE] khodr auto repair - service,Vehicle,Vehicle
+[TYPE_EXPENSE] auto plus garage - maintenance,Vehicle,Vehicle
+[TYPE_EXPENSE] autocare express repair,Vehicle,Vehicle
+[TYPE_EXPENSE] precision garage service,Vehicle,Vehicle
+[TYPE_EXPENSE] autofix center - repair,Vehicle,Vehicle
+[TYPE_EXPENSE] harbour motors service - repair,Vehicle,Vehicle
+[TYPE_EXPENSE] tuneup center - service,Vehicle,Vehicle
+[TYPE_EXPENSE] master garage service,Vehicle,Vehicle
+[TYPE_EXPENSE] autocare express repair,Vehicle,Vehicle
+[TYPE_EXPENSE] precision garage service,Vehicle,Vehicle
+[TYPE_EXPENSE] gearworks repair shop,Vehicle,Vehicle
+[TYPE_EXPENSE] autocare express,Vehicle,Vehicle
+[TYPE_EXPENSE] autofix workshop,Vehicle,Vehicle
+[TYPE_EXPENSE] speedy garage,Vehicle,Vehicle
+[TYPE_EXPENSE] engine works,Vehicle,Vehicle
+[TYPE_EXPENSE] autocare express repair - service,Vehicle,Vehicle
+[TYPE_EXPENSE] brake shop,Vehicle,Vehicle
+[TYPE_EXPENSE] khodr auto repair,Vehicle,Vehicle
+[TYPE_EXPENSE] gym,Sports,Sports
