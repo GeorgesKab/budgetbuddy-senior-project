@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useMemo } from "react";
 import type { Transaction } from "@shared/schema";
 import { getCategoryColor } from "@/lib/category-colors";
+import { getCategoryDisplayName } from "@/lib/category-display";
 
 interface TopExpensesChartProps {
   transactions: Transaction[];
@@ -10,21 +11,25 @@ interface TopExpensesChartProps {
 
 export function TopExpensesChart({ transactions }: TopExpensesChartProps) {
   const chartData = useMemo(() => {
-    if (!transactions || transactions.length === 0) return [];
+  if (!transactions || transactions.length === 0) return [];
 
-    const expenses = transactions.filter(t => t.type === "expense");
+  const expenses = transactions.filter((t) => t.type === "expense");
 
-    const grouped = expenses.reduce((acc, curr) => {
-      const amount = Number(curr.amount);
-      acc[curr.category] = (acc[curr.category] || 0) + amount;
-      return acc;
-    }, {} as Record<string, number>);
+  const grouped = expenses.reduce((acc, curr) => {
+    const amount = Number(curr.amount);
+    acc[curr.category] = (acc[curr.category] || 0) + amount;
+    return acc;
+  }, {} as Record<string, number>);
 
-    return Object.entries(grouped)
-      .map(([name, value]) => ({ name, value }))
-      .sort((a, b) => b.value - a.value)
-      .slice(0, 6);
-  }, [transactions]);
+  return Object.entries(grouped)
+    .map(([rawName, value]) => ({
+      rawName,
+      name: getCategoryDisplayName(rawName),
+      value,
+    }))
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 6);
+}, [transactions]);
 
   return (
     <Card className="h-full">
@@ -56,7 +61,10 @@ export function TopExpensesChart({ transactions }: TopExpensesChartProps) {
                 width={100}
               />
               <RechartsTooltip
-                formatter={(value: number, _name: string, props: any) => [`$${value.toFixed(2)}`, props.payload.name]}
+                formatter={(value: number, _name: string, props: any) => [
+  `$${value.toFixed(2)}`,
+  props.payload.name,
+]}
                 labelFormatter={() => ""}
                 contentStyle={{
                   backgroundColor: "hsl(var(--card))",
@@ -68,8 +76,8 @@ export function TopExpensesChart({ transactions }: TopExpensesChartProps) {
               />
               <Bar dataKey="value" radius={[0, 8, 8, 0]} barSize={32}>
                 {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={getCategoryColor(entry.name)} />
-                ))}
+  <Cell key={`cell-${index}`} fill={getCategoryColor(entry.rawName)} />
+))}
               </Bar>
             </BarChart>
           </ResponsiveContainer>

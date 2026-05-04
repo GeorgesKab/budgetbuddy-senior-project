@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertTransactionSchema, type Category } from "@shared/schema";
@@ -13,6 +13,7 @@ import { useCreateTransaction, useUpdateTransaction } from "@/hooks/use-transact
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { predictCategory, type AutoCategorizeResponse } from "@/services/autoCategorize";
+import { getCategoryDisplayName } from "@/lib/category-display";
 
 // Extend the schema for the form to handle string -> number conversion and Date handling
 const formSchema = insertTransactionSchema.extend({
@@ -39,6 +40,12 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
   const { data: customCategories } = useQuery<Category[]>({
     queryKey: [api.categories.all.path],
   });
+
+const categoryOptions = useMemo(() => {
+  return Array.from(
+    new Set((customCategories ?? []).map((cat) => getCategoryDisplayName(cat.name)))
+  );
+}, [customCategories]);
 
   const isEditing = !!defaultValues?.id;
 
@@ -198,20 +205,23 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
               <FormLabel>
                 Category <span className="text-red-500">*</span>
               </FormLabel>
-              <Select onValueChange={field.onChange} value={field.value}>
-                <FormControl>
-                  <SelectTrigger className="input-field">
-                    <SelectValue placeholder="Select category" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {customCategories?.map((cat) => (
-                    <SelectItem key={cat.id} value={cat.name}>
-                      {cat.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Select
+  onValueChange={field.onChange}
+  value={getCategoryDisplayName(field.value)}
+>
+  <FormControl>
+    <SelectTrigger className="input-field">
+      <SelectValue placeholder="Select category" />
+    </SelectTrigger>
+  </FormControl>
+  <SelectContent>
+    {categoryOptions.map((catName) => (
+      <SelectItem key={catName} value={catName}>
+        {getCategoryDisplayName(catName)}
+      </SelectItem>
+    ))}
+  </SelectContent>
+</Select>
               <FormMessage />
             </FormItem>
           )}
@@ -288,7 +298,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
           {aiSuggestion && (
             <div className="rounded-lg border p-4 space-y-2">
               <p>
-                <strong>Suggested category:</strong> {aiSuggestion.predicted_category}
+                <strong>Suggested category:</strong> {getCategoryDisplayName(aiSuggestion.predicted_category)}
               </p>
 
               <p className="text-sm text-muted-foreground break-all">
@@ -300,7 +310,7 @@ export function TransactionForm({ defaultValues, onSuccess }: TransactionFormPro
                 <ul className="list-disc ml-5 text-sm text-muted-foreground">
                   {aiSuggestion.top_predictions.map((pred) => (
                     <li key={pred.category}>
-                      {pred.category} ({pred.score.toFixed(3)})
+                      {getCategoryDisplayName(pred.category)} ({pred.score.toFixed(3)})
                     </li>
                   ))}
                 </ul>

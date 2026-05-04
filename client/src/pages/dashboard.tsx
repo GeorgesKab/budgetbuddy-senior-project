@@ -16,6 +16,7 @@ import type { Transaction, Category } from "@shared/schema";
 import { getCategoryColor } from "@/lib/category-colors";
 import { getIconComponent } from "@/lib/category-icons";
 import { api } from "@shared/routes";
+import { getCategoryDisplayName } from "@/lib/category-display";
 
 type WidgetId = "balanceTrend" | "recentTransactions" | "expenseBreakdown" | "topExpenses";
 
@@ -34,13 +35,19 @@ const DEFAULT_LAYOUT: WidgetConfig[] = [
 
 function ExpenseBreakdownWidget({ transactions }: { transactions: Transaction[] }) {
   const data = useMemo(() => {
-    const expenses = transactions.filter(t => t.type === "expense");
-    const grouped = expenses.reduce((acc, t) => {
-      acc[t.category] = (acc[t.category] || 0) + Number(t.amount);
-      return acc;
-    }, {} as Record<string, number>);
-    return Object.entries(grouped).map(([name, value]) => ({ name, value }));
-  }, [transactions]);
+  const expenses = transactions.filter((t) => t.type === "expense");
+
+  const grouped = expenses.reduce((acc, t) => {
+    const displayName = getCategoryDisplayName(t.category);
+    acc[displayName] = (acc[displayName] || 0) + Number(t.amount);
+    return acc;
+  }, {} as Record<string, number>);
+
+  return Object.entries(grouped).map(([name, value]) => ({
+    name,
+    value,
+  }));
+}, [transactions]);
 
   const total = useMemo(() => data.reduce((sum, d) => sum + d.value, 0), [data]);
 
@@ -53,8 +60,19 @@ function ExpenseBreakdownWidget({ transactions }: { transactions: Transaction[] 
         {data.length > 0 ? (
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
-              <Pie data={data} cx="50%" cy="45%" innerRadius="55%" outerRadius="80%" paddingAngle={3} dataKey="value" strokeWidth={0}>
-                {data.map((entry) => <Cell key={entry.name} fill={getCategoryColor(entry.name)} />)}
+              <Pie
+                data={data}
+                cx="50%"
+                cy="45%"
+                innerRadius="55%"
+                outerRadius="80%"
+                paddingAngle={3}
+                dataKey="value"
+                strokeWidth={0}
+              >
+                {data.map((entry) => (
+  <Cell key={entry.name} fill={getCategoryColor(entry.name)} />
+))}
               </Pie>
               <RechartsTooltip
                 formatter={(v: number) => `$${v.toFixed(2)}`}
@@ -66,12 +84,37 @@ function ExpenseBreakdownWidget({ transactions }: { transactions: Transaction[] 
                 }}
               />
               <Legend verticalAlign="bottom" height={36} />
-              <text x="50%" y="42%" textAnchor="middle" dominantBaseline="central" style={{ fontSize: "1.5rem", fontWeight: 700, fill: "hsl(var(--foreground))" }}>${total.toFixed(2)}</text>
-              <text x="50%" y="50%" textAnchor="middle" dominantBaseline="central" style={{ fontSize: "0.75rem", fill: "hsl(var(--muted-foreground))" }}>Total Expenses</text>
+              <text
+                x="50%"
+                y="42%"
+                textAnchor="middle"
+                dominantBaseline="central"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: 700,
+                  fill: "hsl(var(--foreground))",
+                }}
+              >
+                ${total.toFixed(2)}
+              </text>
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="central"
+                style={{
+                  fontSize: "0.75rem",
+                  fill: "hsl(var(--muted-foreground))",
+                }}
+              >
+                Total Expenses
+              </text>
             </PieChart>
           </ResponsiveContainer>
         ) : (
-          <div className="h-full flex items-center justify-center text-muted-foreground">No expense data</div>
+          <div className="h-full flex items-center justify-center text-muted-foreground">
+            No expense data
+          </div>
         )}
       </CardContent>
     </Card>
@@ -86,12 +129,13 @@ function RecentTransactionsWidget({
   categories: Category[];
 }) {
   const iconMap = useMemo(() => {
-    const map: Record<string, string> = {};
-    categories.forEach((c) => {
-      map[c.name.toLowerCase()] = c.icon;
-    });
-    return map;
-  }, [categories]);
+  const map: Record<string, string> = {};
+  categories.forEach((c) => {
+    map[c.name.toLowerCase()] = c.icon;
+    map[getCategoryDisplayName(c.name).toLowerCase()] = c.icon;
+  });
+  return map;
+}, [categories]);
 
   const recentTransactions = useMemo(() => {
     return [...transactions]
@@ -108,7 +152,10 @@ function RecentTransactionsWidget({
       <CardContent>
         <div className="divide-y divide-border">
           {recentTransactions.map((t) => {
-            const iconName = iconMap[t.category.toLowerCase()] || "circle";
+            const iconName =
+  iconMap[getCategoryDisplayName(t.category).toLowerCase()] ||
+  iconMap[t.category.toLowerCase()] ||
+  "circle";
             const IconComp = getIconComponent(iconName);
 
             return (
@@ -122,7 +169,7 @@ function RecentTransactionsWidget({
                     {t.description}
                   </span>
                   <span className="text-xs text-muted-foreground">
-                    {format(new Date(t.date), "MMM d, yyyy")} • {t.category}
+                    {format(new Date(t.date), "MMM d, yyyy")} • {getCategoryDisplayName(t.category)}
                   </span>
                 </div>
                 <span

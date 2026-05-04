@@ -838,7 +838,10 @@ function resolveCategoryFilter(message: string, categories: string[]): string | 
     entertainment: "Entertainment",
     transport: "Transport",
     health: "Health",
-    rent: "Rent",
+    rent: "Housing",
+    housing: "Housing",
+    home: "Housing",
+    apartment: "Housing",
     salary: "Salary",
     sports: "Sports",
   };
@@ -871,6 +874,55 @@ function formatMoney(value: number): string {
 
 function formatTypeLabel(type: "income" | "expense"): string {
   return type === "income" ? "income" : "expense";
+}
+
+function getFallbackCategory(type: "income" | "expense") {
+  return type === "income" ? "Other Income" : "Other Expenses";
+}
+
+function getMlTopPredictions(mlPayload: any) {
+  if (!Array.isArray(mlPayload?.top_predictions)) {
+    return [];
+  }
+
+  return mlPayload.top_predictions
+    .filter(
+      (item: any) =>
+        item &&
+        typeof item.category === "string" &&
+        typeof item.score === "number"
+    )
+    .map((item: any) => ({
+      category: item.category,
+      score: item.score,
+    }))
+    .sort(
+      (
+        a: { category: string; score: number },
+        b: { category: string; score: number }
+      ) => b.score - a.score
+    );
+}
+
+function shouldFallbackToOtherCategory(
+  mlPayload: any,
+  type: "income" | "expense"
+) {
+  const ranked = getMlTopPredictions(mlPayload);
+
+  if (!ranked.length) {
+    return true;
+  }
+
+  const topScore = ranked[0].score;
+  const secondScore = ranked[1]?.score ?? -999999;
+  const scoreGap = topScore - secondScore;
+
+  if (type === "expense") {
+    return topScore < 0.55 || scoreGap < 0.15;
+  }
+
+  return topScore < 0.5 || scoreGap < 0.12;
 }
 
 function isDefaultDescription(
@@ -1542,11 +1594,28 @@ export async function handleChatMessage(
       }),
     });
 
-    if (response.ok) {
-      mlPayload = await response.json();
-      predictedCategory = mlPayload.predicted_category || predictedCategory;
-      predictionSource = "ml_model";
-    }
+   if (response.ok) {
+  mlPayload = await response.json();
+
+  const rawPredictedCategory =
+    typeof mlPayload?.predicted_category === "string" &&
+    mlPayload.predicted_category.trim()
+      ? mlPayload.predicted_category.trim()
+      : getFallbackCategory(finalType);
+
+  const useFallbackCategory = shouldFallbackToOtherCategory(
+    mlPayload,
+    finalType
+  );
+
+  predictedCategory = useFallbackCategory
+    ? getFallbackCategory(finalType)
+    : rawPredictedCategory;
+
+  predictionSource = useFallbackCategory
+    ? "ml_model_fallback_other"
+    : "ml_model";
+}
   } catch {
   }
 

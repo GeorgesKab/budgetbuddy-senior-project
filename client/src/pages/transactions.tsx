@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import { getCategoryDisplayName } from "@/lib/category-display";
 
 const CSV_HEADERS = ["date", "type", "amount", "category", "description", "merchant"];
 
@@ -113,25 +114,45 @@ export default function TransactionsPage() {
   };
 
   const filteredTransactions = useMemo(() => {
-    if (!transactions) return [];
-    return transactions.filter((t) => {
-      const matchesSearch = t.description.toLowerCase().includes(search.toLowerCase()) ||
-                            t.category.toLowerCase().includes(search.toLowerCase()) ||
-                            (t.merchant && t.merchant.toLowerCase().includes(search.toLowerCase()));
-      const matchesType = filterType === "all" || t.type === filterType;
-      const matchesCategory = category === "all" || t.category === category;
-      const date = new Date(t.date);
-      const matchesStart = !startDate || date >= new Date(startDate);
-      const matchesEnd = !endDate || date <= new Date(endDate);
-      return matchesSearch && matchesType && matchesCategory && matchesStart && matchesEnd;
-    });
-  }, [transactions, search, filterType, category, startDate, endDate]);
+  if (!transactions) return [];
+
+  return transactions.filter((t) => {
+    const displayCategory = getCategoryDisplayName(t.category);
+
+    const matchesSearch =
+      t.description.toLowerCase().includes(search.toLowerCase()) ||
+      t.category.toLowerCase().includes(search.toLowerCase()) ||
+      displayCategory.toLowerCase().includes(search.toLowerCase()) ||
+      (t.merchant && t.merchant.toLowerCase().includes(search.toLowerCase()));
+
+    const matchesType = filterType === "all" || t.type === filterType;
+    const matchesCategory =
+      category === "all" || getCategoryDisplayName(t.category) === category;
+
+    const date = new Date(t.date);
+    const matchesStart = !startDate || date >= new Date(startDate);
+    const matchesEnd = !endDate || date <= new Date(endDate);
+
+    return (
+      matchesSearch &&
+      matchesType &&
+      matchesCategory &&
+      matchesStart &&
+      matchesEnd
+    );
+  });
+}, [transactions, search, filterType, category, startDate, endDate]);
 
   const categories = useMemo(() => {
-    const tCats = transactions ? transactions.map(t => t.category) : [];
-    const cCats = customCategories ? customCategories.map(c => c.name) : [];
-    return Array.from(new Set([...tCats, ...cCats]));
-  }, [transactions, customCategories]);
+  const tCats = transactions
+    ? transactions.map((t) => getCategoryDisplayName(t.category))
+    : [];
+  const cCats = customCategories
+    ? customCategories.map((c) => getCategoryDisplayName(c.name))
+    : [];
+
+  return Array.from(new Set([...tCats, ...cCats]));
+}, [transactions, customCategories]);
 
   const handleExport = () => {
     const csv = transactionsToCSV(filteredTransactions);
@@ -260,7 +281,7 @@ export default function TransactionsPage() {
                     <span className="font-medium text-muted-foreground mr-2">Row {r.row}</span>
                     {r.status === "ok" ? (
                       <span className="text-foreground">
-                        {r.data?.type === "income" ? "+" : "-"}${Number(r.data?.amount).toFixed(2)} · {r.data?.category} · {r.data?.description || "(no description)"}
+                        {r.data?.type === "income" ? "+" : "-"}${Number(r.data?.amount).toFixed(2)} · {getCategoryDisplayName(r.data?.category)} · {r.data?.description || "(no description)"}
                       </span>
                     ) : (
                       <span className="text-destructive">{r.message}</span>
@@ -351,7 +372,11 @@ export default function TransactionsPage() {
               <SelectTrigger data-testid="select-category"><SelectValue placeholder="All categories" /></SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All categories</SelectItem>
-                {categories.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}
+                {categories.map((c) => (
+  <SelectItem key={c} value={c}>
+    {getCategoryDisplayName(c)}
+  </SelectItem>
+))}
               </SelectContent>
             </Select>
             <Input
@@ -415,7 +440,7 @@ export default function TransactionsPage() {
         </p>
         <div className="flex flex-wrap gap-1.5 mt-1">
           <Badge variant="outline" className="text-xs">
-            {t.category}
+            {getCategoryDisplayName(t.category)}
           </Badge>
           {t.merchant && (
             <Badge variant="secondary" className="text-xs">

@@ -7,6 +7,7 @@ const CATEGORY_COLOR_MAP: Record<string, string> = {
   "other expenses": "#9CA3AF",
   "other income": "#22C55E",
   "rent": "#3B82F6",
+  "housing": "#3B82F6",
   "salary": "#16A34A",
   "shopping": "#EAB308",
   "sports": "#06B6D4",

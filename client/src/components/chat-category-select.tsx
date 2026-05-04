@@ -19,6 +19,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { normalizeOfficialCategoryName } from "@shared/official-ai-categories";
+import { getCategoryDisplayName } from "@/lib/category-display";
 
 type ChatCategorySelectProps = {
   value: string;
@@ -60,10 +61,13 @@ function getCategoryIcon(category: string) {
     return Gift;
   }
 
-  if (normalized.includes("rent")) {
-    return House;
-  }
-
+  if (
+  normalized.includes("rent") ||
+  normalized.includes("housing") ||
+  normalized.includes("home")
+) {
+  return House;
+}
   if (normalized.includes("health") || normalized.includes("medical")) {
     return HeartPulse;
   }
@@ -84,20 +88,24 @@ export function ChatCategorySelect({
   categories,
   onChange,
 }: ChatCategorySelectProps) {
-  const normalizedValue = normalizeOfficialCategoryName(value);
+  const normalizedValue = getCategoryDisplayName(
+  normalizeOfficialCategoryName(value)
+);
 
-  const safeCategories = Array.from(
-    new Set(
-      categories
-        .filter(Boolean)
-        .map((category) => normalizeOfficialCategoryName(category))
-    )
-  ).sort((a, b) => a.localeCompare(b));
+const safeCategories = Array.from(
+  new Set(
+    categories
+      .filter(Boolean)
+      .map((category) =>
+        getCategoryDisplayName(normalizeOfficialCategoryName(category))
+      )
+  )
+).sort((a, b) => a.localeCompare(b));
 
-  if (normalizedValue && !safeCategories.includes(normalizedValue)) {
-    safeCategories.push(normalizedValue);
-    safeCategories.sort((a, b) => a.localeCompare(b));
-  }
+if (normalizedValue && !safeCategories.includes(normalizedValue)) {
+  safeCategories.push(normalizedValue);
+  safeCategories.sort((a, b) => a.localeCompare(b));
+}
 
   return (
     <Select value={normalizedValue} onValueChange={onChange}>
@@ -113,7 +121,7 @@ export function ChatCategorySelect({
             <SelectItem key={category} value={category}>
               <div className="flex items-center gap-2">
                 <Icon className="h-4 w-4 shrink-0" />
-                <span>{category}</span>
+                <span>{getCategoryDisplayName(category)}</span>
               </div>
             </SelectItem>
           );

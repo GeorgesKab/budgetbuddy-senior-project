@@ -33,6 +33,7 @@ import {
   isOfficialAiCategory,
   normalizeOfficialCategoryName,
 } from "@shared/official-ai-categories";
+import { getCategoryDisplayName } from "@/lib/category-display";
 
 function sortByOfficialOrder(items: Category[]) {
   return items
@@ -181,7 +182,9 @@ export default function CategoriesPage() {
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
           {sortedDefaultCategories.map((cat) => {
             const IconComp = getIconComponent(cat.icon);
-            const displayName = normalizeOfficialCategoryName(cat.name);
+            const displayName = getCategoryDisplayName(
+  normalizeOfficialCategoryName(cat.name)
+);
 
             return (
               <div
@@ -404,7 +407,7 @@ export default function CategoriesPage() {
                               className="font-medium"
                               data-testid={`text-category-name-${category.id}`}
                             >
-                              {category.name}
+                              {getCategoryDisplayName(category.name)}
                             </p>
                             <p className="text-xs capitalize text-muted-foreground">
                               {category.type}

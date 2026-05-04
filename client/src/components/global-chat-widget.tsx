@@ -14,6 +14,7 @@ import {
   OFFICIAL_AI_CATEGORY_ORDER,
   normalizeOfficialCategoryName,
 } from "@shared/official-ai-categories";
+import { getCategoryDisplayName } from "@/lib/category-display";
 
 type ChatBubble = {
   role: "user" | "assistant";
@@ -324,9 +325,9 @@ export function GlobalChatWidget() {
 
       appendMessage(
         "assistant",
-        `Saved: $${saved.amount} • ${saved.category} • ${
-          saved.merchant || saved.description
-        }`
+        `Saved: $${saved.amount} • ${getCategoryDisplayName(saved.category)} • ${
+  saved.merchant || saved.description
+}`
       );
 
       setDraft(null);
@@ -542,7 +543,7 @@ export function GlobalChatWidget() {
                                   : "border-border bg-background hover:bg-muted"
                               }`}
                             >
-                              {normalizedPrediction}
+                              {getCategoryDisplayName(normalizedPrediction)}
                               <span className="ml-1 opacity-70">
                                 {formatRankScore(prediction.score)}
                               </span>

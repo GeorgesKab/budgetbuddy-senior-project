@@ -70,7 +70,9 @@ export default function AuthPage() {
       <Card className="w-full max-w-md shadow-2xl border-border/50 bg-card/80 backdrop-blur-xl z-10">
         <CardHeader className="text-center space-y-2">
           <div className="mx-auto w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-2">
-            <Wallet className="w-6 h-6 text-primary" />
+            <img src="/favicon.jpg"
+                className="h-full w-full object-contain"
+            />
           </div>
           <CardTitle className="text-3xl font-display font-bold text-primary">BudgetBuddy</CardTitle>
           <CardDescription className="text-base">Take control of your finances today.</CardDescription>

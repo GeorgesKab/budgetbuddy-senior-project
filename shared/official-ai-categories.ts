@@ -47,7 +47,7 @@ export const OFFICIAL_AI_CATEGORIES: OfficialAiCategory[] = [
     icon: "banknote",
   },
   {
-    name: "Rent",
+    name: "Housing",
     type: "expense",
     icon: "home",
   },
